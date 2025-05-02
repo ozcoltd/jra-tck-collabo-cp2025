@@ -1,7 +1,7 @@
 @use "./setting" as *;
 
-@mixin sp($px: $breakPoint) {
-    @media screen and (max-width: ($breakPoint)){
+@mixin pc($px: $breakPoint) {
+    @media screen and (min-width: ($breakPoint)){
       @content;
     }
 }
@@ -10,22 +10,22 @@
   opacity: 1;
   transition: all .3s;
   &:hover {
-    opacity: .7;
-    @include mq_sp {
-      opacity: 1;
+    opacity: 1;
+    @include pc {
+      opacity: .7;
     }
   }
 
 }
   
 // pxをvwに変換
-@function vw($px, $width: 375){
-@return calc($px / $width * 100vw);
+@function vw($px){
+  @return calc($px / 375 * 100vw);
 }
 
-// pxをvwに変換
-@function vw_pc($px, $width: 1366){
-@return calc($px / $width * 100vw);
+// 375px→500pxに変換
+@function convert($px){
+  @return calc(#{$px}px * ($base / 375));
 }
 
 // line-heightを変換

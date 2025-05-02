@@ -1,0 +1,80 @@
+@use "../../global/mixin" as *;
+@use "../../global/setting" as *;
+
+.p-jra-tck-left {
+    padding-top: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc((100% - 500px) / 2);
+    height: 100vh;
+    min-height: 100vh;
+    z-index: 2;
+    background: linear-gradient(180deg,rgba(0, 145, 58, 1) 0%, rgba(0, 105, 52, 1) 100%);
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    &__text {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 322px;
+    }
+    
+}
+
+.p-jra-tck-right {
+    padding-top: 85px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc((100% - 500px) / 2);
+    height: 100vh;
+    min-height: 100vh;
+    z-index: 2;
+    background: linear-gradient(180deg,rgba(189, 27, 33, 1) 0%, rgba(147, 30, 34, 1) 100%);
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.p-jra-tck-main {
+    padding-top: 58px;
+    @include pc {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+.p-jra-tck-fv {
+    padding-top: vw(45);
+    background: url('./../images/bg/bg-fv-content.png') repeat;
+    background-size: 100% vw(1039), contain;
+    @include pc {
+        padding-top: convert(45);
+        background-size: 100% , convert(1039) contain;
+    }   
+}
+
+.p-jra-tck-anchor {
+    padding: 0 16px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: calc((100% / 3) - 5px);
+        background-color: $black;
+        position: relative;
+    }
+    &__heading {
+        position: absolute;
+    }
+    
+}

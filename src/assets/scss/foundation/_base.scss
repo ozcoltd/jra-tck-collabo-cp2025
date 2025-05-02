@@ -1,2 +1,18 @@
 @use "../global/mixin" as *;
 @use "../global/setting" as *;
+
+body {
+    color: $black;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    @include hover;
+}

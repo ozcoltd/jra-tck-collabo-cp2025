@@ -1,2 +1,39 @@
 @use "../global/mixin" as *;
 @use "../global/setting" as *;
+
+
+.l-nav {
+    margin: 0 auto;
+    max-width: 332px;
+    padding: 0 20px;
+    &__list {
+        margin-bottom: min(calc(74 / 1366 * 100vw), 74px);
+        font-size: min(calc(16 / 1366 * 100vw), 16px);
+        color: #fff;
+        font-weight: bold;
+    }
+    &__item {
+        margin-top: min(calc(16 / 1366 * 100vw), 16px);
+        &::before {
+            content: '';
+            margin-right: min(calc(16 / 1366 * 100vw), 16px);
+            width: min(calc(8 / 1366 * 100vw), 8px);
+            height: min(calc(8 / 1366 * 100vw), 8px);
+            display: inline-block;
+            background: $gold;
+            border-radius: 100%;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+        }
+    }
+    &__bnr {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    &__bnr-item {
+        max-width: 142px;
+    }
+    
+}

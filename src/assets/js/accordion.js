@@ -1,10 +1,3 @@
-// accordion.js
-export class Accordion {
-    constructor() {
-      this.init();
-    }
-
-    init() {
+export function Accordion() {
       console.log("Accordion task");
-    }
 }

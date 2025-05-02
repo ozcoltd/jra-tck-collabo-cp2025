@@ -66,12 +66,12 @@ const jsTask = async () => {
 const imagesTask = () => {
   return gulp
     .src(`${srcDir}/assets/images/**/*.{jpg,jpeg,png,gif}`, { encoding: false })
-    .pipe(changed(`${destDir}/assets/img`))
+    .pipe(changed(`${destDir}/assets/images`))
     .pipe(imagemin([
       imageminMozjpeg({ quality: 65, progressive: true }),
       imageminPngquant({ quality: [0.6, 0.7], speed: 1 })
     ]))
-    .pipe(gulp.dest(`${destDir}/assets/img`))
+    .pipe(gulp.dest(`${destDir}/assets/images`))
     .pipe(browserSync.stream());
 };
 

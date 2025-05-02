@@ -3,14 +3,14 @@
 
 .u-nopc {
     display: block;
-    @include sp {
+    @include pc {
         display: none;
     }
 }
 
 .u-nosp {
     display: none;
-    @include sp {
+    @include pc {
         display: block;    
     }
 }

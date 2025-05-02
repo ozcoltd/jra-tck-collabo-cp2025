@@ -13,8 +13,9 @@
 @use "./layout/nav";
 
 
-@use "./object/component";
-@use "./project/p-jra-tck";
+@use "./object/component/btn";
+@use "./object/project/user-entry";
+@use "./object/project/p-jra-tck";
 
 
 @use "./utility/utility";

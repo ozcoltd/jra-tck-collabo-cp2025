@@ -1,9 +1,3 @@
-export class Slider {
-    constructor() {
-      this.init();
-    }
-
-    init() {
-      console.log("slider task");
-    }
+export function Slider() {
+  console.log("slider task");
 }
