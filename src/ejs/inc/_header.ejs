@@ -1,0 +1,45 @@
+
+<%
+var metaSiteTitle = '',
+metaTitle = pageMeta.title,
+metaDescription = pageMeta.description,
+metaKeywords = pageMeta.keywords;
+if (metaTitle == ''){ var metaTitle = '【タイトルを設定してください】' }
+if (metaDescription == ''){ var metaDescription = '' }
+if (metaKeywords == ''){ var metaKeywords = '' }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+      <!-- // meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <!-- // favicon.ico -->
+      <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+      <!-- // SEO関連 -->
+      <title><%= metaTitle %></title>
+      <meta name="description" content="<%= metaDescription %>">
+      <meta name="keywords" content="<%= metaKeywords %>">
+      <!-- // OGP -->
+      <meta property="og:site_name" content="<%= metaTitle %>">
+      <meta property="og:title" content="<%= metaTitle %>">
+      <meta property="og:description" content="<%= metaDescription %>">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="ogp推移先url">
+      <meta property="og:image" content="/assets/images/ogp.png">
+      <!-- Twitter Cards設定 -->
+      <meta name="twitter:title" content="<%= metaTitle %>">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:description" content="<%= metaDescription %>">
+      <meta name="twitter:image" content="/assets/images/ogp.png">
+      <!-- // google font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+      <!-- // css -->
+      <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    
+  </header>

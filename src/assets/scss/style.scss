@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@use "./foundation/reset";
+@use "./foundation/base";
+
+
+@use "./global/setting";
+@use "./global/mixin";
+
+
+@use "./layout/footer";
+@use "./layout/header";
+@use "./layout/nav";
+
+
+@use "./object/component";
+@use "./project/p-jra-tck";
+
+
+@use "./utility/utility";

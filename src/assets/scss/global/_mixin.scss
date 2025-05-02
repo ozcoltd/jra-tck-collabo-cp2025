@@ -1,0 +1,39 @@
+@use "./setting" as *;
+
+@mixin sp($px: $breakPoint) {
+    @media screen and (max-width: ($breakPoint)){
+      @content;
+    }
+}
+
+@mixin hover {
+  opacity: 1;
+  transition: all .3s;
+  &:hover {
+    opacity: .7;
+    @include mq_sp {
+      opacity: 1;
+    }
+  }
+
+}
+  
+// pxをvwに変換
+@function vw($px, $width: 375){
+@return calc($px / $width * 100vw);
+}
+
+// pxをvwに変換
+@function vw_pc($px, $width: 1366){
+@return calc($px / $width * 100vw);
+}
+
+// line-heightを変換
+@function lh($px, $lh){
+@return calc($lh / $px);
+}
+
+// letter-spacingを変換
+@function ls($px){
+@return calc($px / 1000 * 1em);
+}

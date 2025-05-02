@@ -1,0 +1,16 @@
+@use "../global/mixin" as *;
+@use "../global/setting" as *;
+
+.u-nopc {
+    display: block;
+    @include sp {
+        display: none;
+    }
+}
+
+.u-nosp {
+    display: none;
+    @include sp {
+        display: block;    
+    }
+}

@@ -1,0 +1,15 @@
+<%
+const pagePath = '.',
+pageSlug = '',
+pageMeta = {
+  title:'',
+  description:'説明文',
+  keywords:'キーワード'
+}
+%>
+<%- include(pagePath + '/inc/_header' , { pagePath: pagePath, pageSlug: pageSlug, pageMeta: pageMeta }) %>
+<main>
+
+    
+</main>
+<%- include(pagePath + '/inc/_footer' , { pagePath: pagePath, pageSlug: pageSlug }) %>
