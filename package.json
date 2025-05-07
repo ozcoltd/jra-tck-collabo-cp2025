@@ -32,5 +32,8 @@
     "sass": "^1.87.0",
     "webpack": "^5.99.7",
     "webpack-stream": "^7.0.0"
+  },
+  "volta": {
+    "node": "20.15.0"
   }
 }

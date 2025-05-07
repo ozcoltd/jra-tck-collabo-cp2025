@@ -44,37 +44,899 @@
 }
 
 .p-jra-tck-main {
-    padding-top: 58px;
+    padding-top: vw(58);
     @include pc {
         margin: 0 auto;
+        padding-top: 0;
         width: 100%;
         max-width: 500px;
     }
 }
 
 .p-jra-tck-fv {
-    padding-top: vw(45);
-    background: url('./../images/bg/bg-fv-content.png') repeat;
-    background-size: 100% vw(1039), contain;
+    padding: vw(45) 0 vw(73);
+    background:
+    url('./../images/bg/bg-fv-content-bottom.png') center bottom no-repeat,
+    url('./../images/bg/bg-fv-content.png') repeat;
+    background-size: 100% vw(66), 100% vw(1040);
     @include pc {
-        padding-top: convert(45);
-        background-size: 100% , convert(1039) contain;
+        padding: w500(45) 0 w500(73);
+        background-size: 100% w500(66), 100% w500(1040);
     }   
 }
 
 .p-jra-tck-anchor {
+    margin-bottom: vw(56);
     padding: 0 16px;
+    @include pc {
+        margin-bottom: w500(56);
+    }
     &__list {
         display: flex;
         justify-content: space-between;
     }
     &__item {
+        padding-top: vw(37);
         width: calc((100% / 3) - 5px);
-        background-color: $black;
         position: relative;
+        &.is-disabled {
+            .p-jra-tck-anchor__link {
+                opacity: .4;
+                pointer-events: none;
+            }
+            .p-jra-tck-anchor__box {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        @include pc {
+            padding-top: w500(37);
+        }
+    }
+    &__box {
+        padding-top: vw(24);
+        height: vw(145);
+        background-color: $black;
+        color: #fff;
+        text-align: center;
+        &::after {
+            content: '';
+            display: block;
+            width: vw(16);
+            height: vw(16);
+            background: url('./../images/icon/icon-arrow-01.png') center / contain no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            @include pc {
+                width: w500(16);
+                height: w500(16);
+            }
+        }
+        @include pc {
+            height: w500(145);
+            padding-top: w500(24);
+        }
     }
     &__heading {
+        width: 100%;
+        color: $gold;
+        text-align: center;
         position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    
+    &__no {
+        margin: 0 auto;
+        &--01 {
+            @extend .p-jra-tck-anchor__no;
+            max-width: vw(33);
+            @include pc {
+                max-width: w500(33);
+            }
+        }
+        &--02 {
+            @extend .p-jra-tck-anchor__no;
+            max-width: vw(39);
+            @include pc {
+                max-width: w500(39);
+            }
+        }
+        &--03 {
+            @extend .p-jra-tck-anchor__no;
+            max-width: vw(39);
+            @include pc {
+                max-width: w500(39);
+            }
+        }
+
+    }
+    &__race {
+        position: relative;
+        line-height: 1.4;
+        span {
+            display: inline-block;
+            line-height: 1.2;
+        }
+        & + & {
+            margin-top: vw(32);
+            @include pc {
+                margin-top: w500(32);
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: vw(16);
+                height: vw(16);
+                background: url('./../images/icon/icon-cross.png') center / contain no-repeat;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, calc(-100% - 8px));
+                @include pc {
+                    width: w500(16);
+                    height: w500(16);
+                }
+            }
+        }
+    }    
+}
+
+.p-jra-tck-feature {
+    padding-top: vw(40);
+    @include pc {
+        padding-top: w500(40);
+    }
+    &__inner {
+        margin: 0 auto;
+        padding: vw(24);
+        max-width: vw(343);
+        background: #fff;
+        @include pc {
+            max-width: w500(343);
+            padding: w500(24);
+        }
+    }
+    &__ttl {
+        margin-bottom: vw(8);
+        color: $red;
+        font-size: vw(18);
+        font-weight: bold;
+        text-align: center;
+        @include pc {
+            margin-bottom: w500(8);
+            font-size: w500(18);
+        }
+        span {
+            margin: 0 auto vw(8);
+            max-width: vw(68);
+            display: block;
+            @include pc {
+                margin-bottom: w500(8);
+                max-width: w500(68);
+            }
+        }
+    }
+    &__text {
+        margin-bottom: vw(18);
+        @include pc {
+            margin-bottom: w500(18);
+        }
+    }
+    &__link {
+        width: fit-content;
+        margin: 0 auto;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: #777;
+            font-weight: bold;
+            &::after {
+                content: '';
+                display: block;
+                width: vw(16);
+                height: vw(16);
+                background: url('./../images/icon/icon-more.png') center / contain no-repeat;
+                @include pc {
+                    width: w500(16);
+                    height: w500(16);
+                }
+            }
+        }
+    }
+}
+
+.p-jra-tck-campaign {
+    padding: vw(57) 16px vw(56);
+    background: $black;
+    color: #fff;
+    @include pc {
+        padding: w500(57) 16px w500(56);
+    }
+    &__ttl {
+        margin-bottom: vw(12);
+        @include pc {
+            margin-bottom: w500(12);
+        }
+    }
+    &__sup {
+        padding: vw(7);
+        color: $gold;
+        font-size: vw(12);
+        border: 1px solid #fff;
+        border-radius: vw(8);
+        background: rgba(255, 255, 255, 0.3);
+        @include pc {
+            padding: w500(7);
+            border-radius: w500(8);
+            font-size: w500(12);
+        }
+    }
+    &__pic {
+        margin: 0 auto;
+        max-width: vw(218);
+        @include pc {
+            max-width: w500(218);
+        }
+    }
+    &__text-heading {
+        margin-bottom: vw(16);
+        font-size: vw(18);
+        text-align: center;
+        line-height: 1.5;
+        @include pc {
+            margin-bottom: w500(16);
+            font-size: w500(18);
+        }
+        .u-font-large {
+            font-size: vw(24);
+            @include pc {
+                font-size: w500(24);
+            }
+        }
+    }
+    &__text-bottom {
+        margin-bottom: vw(35);
+        text-align: center;
+        @include pc {
+            margin-bottom: w500(35);
+        }
+        .u-font-large {
+            font-size: vw(18);
+            line-height: 1.5;
+            @include pc {
+                font-size: w500(18);
+            }
+        }
+    }
+    &__balloon {
+        margin-bottom: vw(4);
+        font-weight: bold;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: vw(6);
+        @include pc {
+            margin-bottom: w500(4);
+            gap: w500(6);
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: vw(8);
+            height: vw(16);
+            background: url('./../images/icon/icon-balloon-01.png') center / contain no-repeat;
+            @include pc {
+                width: w500(8);
+                height: w500(16);
+            }
+        }
+        &::after {
+            transform:  scaleX(-1);
+        }
+    }
+    &__content {
+        margin-top: vw(40);
+        padding-top: vw(50);
+        position: relative;
+        @include pc {
+            margin-top: w500(40);
+            padding-top: w500(50);
+        }
+        &.is-disabled {
+            .p-jra-tck-campaign__content-inner {
+                padding: vw(76) vw(71) vw(68);
+                @include pc {
+                    padding: w500(76) w500(71) w500(68);
+                }
+            }
+        }
+    }
+    &__content-heading {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__content-inner {
+        padding: vw(48) 24px vw(38);
+        height: 100%;
+        background: $gray;
+        @include pc {
+            padding: w500(48) w500(24) w500(38);
+        }
+    }
+    &__no {
+        margin: vw(4) auto 0;
+        @include pc {
+            margin-top: w500(4);
+            max-width: w500(50);
+        }
+        &--01 {
+            @extend .p-jra-tck-campaign__no;
+            max-width: vw(50);
+            @include pc {
+                max-width: w500(50);
+            }
+        }
+        &--02 {
+            @extend .p-jra-tck-campaign__no;
+
+            max-width: vw(58);
+            @include pc {
+                max-width: w500(58);
+            }
+        }
+        &--03 {
+            @extend .p-jra-tck-campaign__no;
+            max-width: vw(58);
+            @include pc {
+                max-width: w500(58);
+            }
+        }
+    }
+    &__race-name {
+        margin-bottom: vw(32);
+        text-align: center;
+        @include pc {
+            margin-bottom: w500(32);
+        }
+    }
+    &__race {
+        display: block;
+        font-size: vw(32);
+        font-weight: 900;
+        position: relative;
+        line-height: 1.4;
+        @include pc {
+            font-size: w500(32);
+        }
+        & + & {
+            margin-top: vw(48);
+            @include pc {
+                margin-top: w500(48);
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: vw(32);
+                height: vw(32);
+                background: url('./../images/icon/icon-cross.png') center / contain no-repeat;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, calc(-100% - 8px));
+                @include pc {
+                    width: w500(32);
+                    height: w500(32);
+                }
+            }
+        }
+    }
+    &__date {
+        margin-bottom: vw(24);
+        @include pc {
+            margin-bottom: w500(24);
+        }
+    }
+    &__date-ttl {
+        margin-bottom: vw(4);
+        font-size: vw(16);
+        @include pc {
+            margin-bottom: w500(4);
+            font-size: w500(16);
+        }
+    }
+    &__date-ja {
+        span {
+            color: #FF646B;
+        }
+    }
+    &__date-tokyo {
+        span {
+            color: #52D687;
+        }
+    }
+    &__period {
+        margin-bottom: vw(32);
+        @include pc {
+            margin-bottom: w500(32);
+        }
+    }
+}
+
+.p-jra-tck-apply {
+    padding: vw(56) 16px;
+    background: $gray;
+    @include pc {
+        padding: w500(56) w500(16);
+    }
+    &__ttl {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: vw(24);
+        color: #fff;
+        font-size: vw(20);
+        font-weight: bold;
+        @include pc {
+            gap: w500(24);
+            font-size: w500(20);
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: vw(6);
+            height: vw(20);
+            background: url('./../images/icon/icon-brackets-02.png') center / contain no-repeat;
+            @include pc {
+                width: w500(6);
+                height: w500(20);
+            }
+        }
+        &::after {
+            transform: scaleX(-1);
+        }
+    }
+}
+
+.p-jra-tck-schedule {
+    padding: vw(56) 16px;
+    @include pc {
+        padding: w500(56) w500(16);
+    }
+    &__ttl {
+        margin-bottom: vw(35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: vw(24);
+        font-size: vw(20);
+        font-weight: bold;
+        @include pc {
+            margin-bottom: w500(35);
+            gap: w500(24);
+            font-size: w500(20);
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: vw(6);
+            height: vw(20);
+            background: url('./../images/icon/icon-brackets-01.png') center / contain no-repeat;
+            @include pc {
+                width: w500(6);
+                height: w500(20);
+            }
+        }
+        &::after {
+            transform: scaleX(-1);
+        }
+    }
+    &__wrap {
+        display: flex;
+        gap: vw(8);
+        @include pc {
+            gap: w500(8);
+        }
+        & + & {
+            margin-top: vw(8);
+            @include pc {
+                margin-top: w500(8);
+            }
+        }
+    }
+    &__date {
+        width: vw(100);
+        white-space: nowrap;
+        @include pc {
+            width: w500(100);
+        }
+        span {
+            font-size: vw(24);
+            font-family: "Roboto", sans-serif;
+            letter-spacing: -0.08em;
+            @include pc {
+                font-size: w500(24);
+            }
+        }
+    }
+    &__btn {
+        flex-grow: 1;
+    }
+    &__link {
+        padding: vw(8) vw(16);
+        background: #F9F9F9;
+        border-radius: vw(8);
+        display: block;
+        font-size: vw(16);
+        font-weight: bold;
+        position: relative;
+        @include pc {
+            padding: w500(8) w500(16);
+            border-radius: w500(8);
+            font-size: w500(16);
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: vw(16);
+            height: vw(16);
+            background: url('./../images/icon/icon-arrow-01.png') center / contain no-repeat;
+            position: absolute;
+            top: 50%;
+            right: vw(16);
+            transform: translateY(-50%) rotate(-90deg);
+            @include pc {
+                width: w500(16);
+                height: w500(16);
+                right: w500(16);
+            }
+        }
+    }
+    &__label {
+        margin-bottom: vw(2);
+        padding: 0 vw(8);
+        width: fit-content;
+        display: block;
+        border-radius: vw(4);
+        color: #fff;
+        font-size: vw(12);
+        @include pc {
+            margin-bottom: w500(2);
+            padding: 0 w500(8);
+            font-size: w500(12);
+            border-radius: w500(4);
+        }
+        &--green {
+            @extend .p-jra-tck-schedule__label;
+            background: $green;
+        }
+        &--red {
+            @extend .p-jra-tck-schedule__label;
+            background: $red;
+        }
+    }
+}
+
+.p-jra-tck-info {
+    padding: vw(56) 16px;
+    background: url('./../images/bg/bg-info.png') center / cover no-repeat;
+    @include pc {
+        padding: w500(56) w500(16);
+    }
+    &__ttl {
+        margin-bottom: vw(20);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: vw(24);
+        color: #fff;
+        font-size: vw(20);
+        font-weight: bold;
+        @include pc {
+            margin-bottom: w500(20);
+            gap: w500(24);
+            font-size: w500(20);
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: vw(6);
+            height: vw(20);
+            background: url('./../images/icon/icon-brackets-02.png') center / contain no-repeat;
+            @include pc {
+                width: w500(6);
+                height: w500(20);
+            }
+        }
+        &::after {
+            transform: scaleX(-1);
+        }
+    }
+    &__box {
+        background: #fff;
+        & + & {
+            margin-top: vw(24);
+            @include pc {
+                margin-top: w500(24);
+            }
+        }
+    }
+    &__text-wrap {
+        padding: vw(16) vw(24);
+        @include pc {
+            padding: w500(16) w500(24);
+        }
+    }
+    &__sub-ttl {
+        margin-bottom: vw(4);
+        font-size: vw(18);
+        font-weight: bold;
+        @include pc {
+            margin-bottom: w500(4);
+            font-size: w500(18);
+        }
+    }
+}
+
+.p-jra-tck-faq {
+    padding: vw(56) 16px;
+    background: #F9F9F9;
+    @include pc {
+        padding: w500(56) w500(16);
+    }
+    &__ttl {
+        margin-bottom: vw(24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: vw(24);
+        font-size: vw(20);
+        font-weight: bold;
+        @include pc {
+            margin-bottom: w500(24);
+            gap: w500(24);
+            font-size: w500(20);
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: vw(6);
+            height: vw(20);
+            background: url('./../images/icon/icon-brackets-01.png') center / contain no-repeat;
+            @include pc {
+                width: w500(6);
+                height: w500(20);
+            }
+        }
+        &::after {
+            transform: scaleX(-1);
+        }
+    }
+    &__accordion {
+        border-radius: vw(8);
+        box-shadow: 0 0 8px rgba(17, 17, 17, 0.08);
+        @include pc {
+            border-radius: w500(8);
+        }
+        & + & {
+            margin-top: vw(8);
+            @include pc {
+                margin-top: w500(8);
+            }
+        }
+    }
+    &__accordion-btn {
+        padding: vw(16) vw(52) vw(16) vw(56);
+        font-weight: bold;
+        transition: .3s;
+        cursor: pointer;
+        position: relative;
+        @include pc {
+            padding: w500(16) w500(52) w500(16) w500(56);
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: vw(24);
+            height: vw(24);
+            background: url('./../images/icon/icon-faq.png') center / contain no-repeat;
+            position: absolute;
+            top: vw(16);
+            left: vw(24);
+            @include pc {
+                width: w500(24);
+                height: w500(24);
+                top: w500(16);
+                left: w500(24);
+            }
+        }
+        &.is-active {
+            .p-jra-tck-faq__accordion-cross {
+                &::after {
+                    transform: none;
+                }
+            }
+        }
+    }
+    &__accordion-content {
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+    &__accordion-text {
+        padding: vw(16) vw(24);
+        @include pc {
+            padding: w500(16) w500(24);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: vw(295);
+            border-top: 1px solid #ccc;
+            @include pc {
+                width: w500(295);
+            }
+        }
+    }
+    &__accordion-cross {
+        display: block;
+        width: vw(16);
+        height: vw(16);
+        position: absolute;
+        top: vw(20);
+        right: vw(28);
+        @include pc {
+            width: w500(16);
+            height: w500(16);
+            top: w500(20);
+            right: w500(28);
+        }
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            display: block;
+            background: #777;
+            position: absolute;
+            transition: .3s;
+            top: 50%;
+            left: 0;
+        }
+        &::after {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.p-jra-tck-contact {
+    padding: vw(56) 16px;
+    @include pc {
+        padding: w500(56) w500(16);
+    }
+    &__inner {
+        padding: vw(24);
+        background: #F9F9F9;
+        @include pc {
+            padding: w500(24);
+        }
+    }
+    &__ttl {
+        margin-bottom: vw(16);
+        padding-bottom: vw(16);
+        font-size: vw(18);
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        @include pc {
+            margin-bottom: w500(16);
+            padding-bottom: w500(16);
+            font-size: w500(18);
+        }
+    }
+    &__sub {
+        margin-bottom: vw(8);
+        text-align: center;
+        @include pc {
+            margin-bottom: w500(8);
+        }
+    }
+    &__mail {
+        margin-bottom: vw(24);
+        font-size: vw(18);
+        color: #CFAF43;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 1px solid #CFAF43;
+        @include pc {
+            margin-bottom: w500(24);
+            font-size: w500(18);
+        }
+    }
+    &__note {
+        color: #777;
+        font-size: vw(12);
+        @include pc {
+            font-size: w500(12);
+        }
+    }
+}
+
+.p-jra-tck-bottom {
+    padding: vw(40) 0 vw(80);
+    background:
+    url('./../images/bg/bg-fv-content.png') repeat;
+    background-size: 100% vw(1040);
+    position: relative;
+    @include pc {
+        padding: w500(40) 0 w500(80);
+        background-size: 100% w500(1040);
+    }   
+}
+
+.p-jra-tck-watch {
+    margin: vw(80) auto 0;
+    padding: vw(20);
+    max-width: vw(303);
+    background: rgba(249, 249, 249, 0.8);
+    @include pc {
+        margin: w500(80) auto 0;
+        padding: w500(20);
+        max-width: w500(303);
+    }
+    &__ttl {
+        margin-bottom: vw(8);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: vw(10);
+        font-size: vw(18);
+        font-weight: bold;
+        color: $red;
+        text-align: center;
+        @include pc {
+            margin-bottom: w500(8);
+            gap: w500(10);
+            font-size: w500(18);
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: vw(22);
+            height: vw(36);
+            background: url('./../images/icon/icon-balloon-02.png') center / contain no-repeat;
+            @include pc {
+                width: w500(22);
+                height: w500(36);
+            }
+        }
+        &::after {
+            transform:  scaleX(-1);
+        }
+    }
+    &__text {
+        margin: vw(16) 0 vw(4);
+        text-align: center;
+        font-weight: bold;
+        @include pc {
+            margin: w500(16) 0 w500(4);
+        }
+    }
 }

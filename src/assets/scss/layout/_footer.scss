@@ -1,2 +1,47 @@
 @use "../global/mixin" as *;
 @use "../global/setting" as *;
+
+.l-footer {
+    margin: 0 auto;
+    padding: vw(16) vw(20);
+    width: 100%;
+    background: $black;
+    @include pc {
+        padding: w500(16) w500(20);
+        max-width: 500px;
+    }
+    &__logo {
+        margin: 0 auto vw(32);
+        max-width: vw(120);
+        @include pc {
+            margin-bottom: w500(32);
+            max-width: w500(120);
+        }
+    }
+    &__list {
+        margin: 0 auto vw(40);
+        max-width: vw(280);
+        display: flex;
+        justify-content: space-between;
+        @include pc {
+            margin-bottom: w500(40);
+            max-width: w500(280);
+        }
+    }
+    &__item {
+        max-width: vw(40);
+        @include pc {
+            max-width: w500(40);
+        }
+    }
+    &__copy {
+        color: #ccc;
+        text-align: center;
+        small {
+            font-size: vw(12);
+            @include pc {
+                font-size: w500(12);
+            }
+        }
+    }
+}

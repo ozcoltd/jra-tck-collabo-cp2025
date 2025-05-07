@@ -2,5 +2,69 @@
 @use "../../global/setting" as *;
 
 .c-user-entry {
-    
+    padding: 0 9px;
+    display: flex;
+    justify-content: space-between;
+    @include pc {
+    }
+    &__jra,
+    &__local {
+        padding: vw(22) vw(6);
+        max-width: vw(172);
+        background: rgba(255, 255, 255, 0.8);
+        border: 2px solid #fff;
+        border-radius: vw(16);
+        @include pc {
+            max-width: w500(172);
+            padding: w500(22) w500(7);
+            border-radius: w500(16);
+        }
+    }
+    &__jra {
+        .c-user-entry__ttl {
+            color: $green;        
+        }
+    }
+    &__local {
+        .c-user-entry__ttl {
+            color: $red;        
+        }
+    }
+    &__ttl {
+        margin-bottom: vw(16);
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.3;
+        @include pc {
+            margin-bottom: w500(16);
+        }
+        span {
+            font-size: vw(18);
+            font-weight: bold;
+            @include pc {
+                font-size: w500(18);
+            }
+        }
+    }
+    &__sub-ttl {
+        text-align: center;
+    }
+    &__contents {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: vw(20);
+        @include pc {
+            gap: w500(20);
+        }
+    }
+    &__bnr {
+        & + & {
+            margin-top: vw(12);
+            @include pc {
+                margin-top: w500(12);
+            }
+        }
+    }
 }

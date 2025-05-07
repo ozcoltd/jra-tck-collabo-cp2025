@@ -24,7 +24,7 @@
 }
 
 // 375px→500pxに変換
-@function convert($px){
+@function w500($px){
   @return calc(#{$px}px * ($base / 375));
 }
 

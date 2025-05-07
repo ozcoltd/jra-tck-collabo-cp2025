@@ -2,5 +2,169 @@
 @use "../../global/setting" as *;
 
 .c-btn {
-    
+    max-width: vw(240);
+    margin: 0 auto;
+    @include pc {
+        max-width: w500(240);
+    }
+    a {
+        padding: vw(12) vw(24);
+        display: block;
+        border-radius: vw(8);
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.3);
+        color: #fff;
+        font-size: vw(20);
+        font-weight: bold;
+        position: relative;
+        @include pc {
+            padding: w500(12) w500(24);
+            border-radius: w500(8);
+            font-size: w500(20);
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: vw(16);
+            height: vw(16);
+            background: url('./../images/icon/icon-arrow-02.png') center / contain no-repeat;
+            position: absolute;
+            top: 50%;
+            right: vw(24);
+            transform: translateY(-50%);
+            @include pc {
+                width: w500(16);
+                height: w500(16);
+                right: w500(24);
+            }
+        }
+    }
+    &--modal {
+        @extend .c-btn;
+        a {
+            &::after {
+                content: '';
+                background: url('./../images/icon/icon-modal.png') center / contain no-repeat;
+               
+            }
+        }
+    }
+    & + * {
+        margin-top: vw(16);
+        @include pc {
+            margin-top: w500(16);
+        }
+    }
+}
+
+.c-btn-shadow {
+    a {
+        padding-left: vw(8);
+        min-height: vw(56);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: $black;
+        border-radius: vw(8);
+        color: #fff;
+        font-weight: 600;
+        @include pc {
+            padding-left: w500(8);
+            min-height: w500(56);
+            border-radius: w500(8);
+        }
+        span {
+            &::after {
+                content: '';
+                display: inline-block;
+                width: vw(16);
+                height: vw(16);
+                background: url('./../images/icon/icon-arrow-01.png') center / contain no-repeat;
+                @include pc {
+                    width: w500(15);
+                    height: w500(15);
+                }
+            }
+        }
+    }
+    & + * {
+        margin-top: vw(16);
+        @include pc {
+            margin-top: w500(16);
+        }
+    }
+    &--red {
+        @extend .c-btn-shadow;
+        a {
+            box-shadow: 0 4px 0 $red;
+        }
+        span {
+            &::after {
+                content: '';
+                margin-left: vw(12);
+                position: relative;
+                top: vw(3);
+                transform: rotate(-90deg);
+                @include pc {
+                    margin-left: w500(12);
+                    top: w500(3);
+                }
+            }
+        }
+    }
+    &--green {
+        @extend .c-btn-shadow;
+        a {
+            box-shadow: 0 4px 0 $green;
+        }
+        span {
+            &::after {
+                content: '';
+                margin-left: vw(12);
+                position: relative;
+                top: vw(3);
+                transform: rotate(-90deg);
+                @include pc {
+                    margin-left: w500(12);
+                    top: w500(3);
+                }
+            }
+        }
+    }
+    &--gold {
+        @extend .c-btn-shadow;
+        a {
+            padding: vw(24) vw(20);
+            font-size: vw(20);
+            color: $black;
+            box-shadow: 0 4px 0 $black;
+            background: linear-gradient(315deg,rgba(168, 120, 27, 1) 0%, rgba(255, 246, 175, 1) 100%);
+            @include pc {
+                padding: w500(24) w500(20);
+                font-size: w500(20);
+            }
+        }
+        span {
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+        }
+    }
+}
+
+
+.c-footer-btn {
+    max-width: vw(32);
+    position: absolute;
+    right: vw(8);
+    bottom: 0;
+    transform: translateY(50%);
+    @include pc {
+        max-width: w500(32);
+        right: w500(8);
+    }
 }

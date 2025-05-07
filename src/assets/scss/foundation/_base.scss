@@ -3,9 +3,12 @@
 
 body {
     color: $black;
-    font-size: 14px;
+    font-size: vw(14);
     font-family: "Noto Sans JP", sans-serif;
     line-height: 1.6;
+    @include pc {
+        font-size: w500(14);
+    }
 }
 
 img {

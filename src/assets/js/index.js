@@ -1,5 +1,7 @@
-import { Accordion } from './accordion.js';
 import { Slider } from './slider.js';
+import { Accordion } from './accordion.js';
+import { Anchor } from './anchor.js';
 
-Accordion();
 Slider();
+Accordion();
+Anchor();

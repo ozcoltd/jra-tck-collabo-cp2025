@@ -1,0 +1,21 @@
+@use "../../global/mixin" as *;
+@use "../../global/setting" as *;
+
+.c-note {
+    opacity: .8;
+    color: #ccc;
+    li {
+        padding-left: vw(16);
+        font-size: vw(12);
+        position: relative;
+        @include pc {
+            padding-left: w500(16);
+            font-size: w500(12);
+        }
+        &::before {
+            content: '※';
+            position: absolute;
+            left: 0;
+        }
+    }
+}
