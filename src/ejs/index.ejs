@@ -2,23 +2,26 @@
 const pagePath = '.',
 pageSlug = '',
 pageMeta = {
-  title:'',
-  description:'説明文',
+  title:'感動をよくばれ JRA×TCKコラボキャンペーン',
+  description:'感動をよくばれ JRA×TCKコラボキャンペーン',
   keywords:'キーワード'
 }
 %>
 <%- include(pagePath + '/inc/_header' , { pagePath: pagePath, pageSlug: pageSlug, pageMeta: pageMeta }) %>
 <main>
+  <div class="p-jra-tck-op js-animation is-hidden">
+    <p class="p-jra-tck-op__pic"><img src="./assets/images/img-fv.png" alt="感動をよくばれ JRA×TCKコラボキャンペーン"></p>
+  </div>
   <div class="p-jra-tck-left u-nosp">
     <div class="p-jra-tck-left__wrap">
-      <p class="p-jra-tck-left__text"><img src="./assets/images/img-text-pc-left-02.png" alt=""></p>
-      <p class="p-jra-tck-left__date"><img src="./assets/images/img-text-pc-left-01.png" alt=""></p>
+      <p class="p-jra-tck-left__text"><img src="./assets/images/img-text-pc-left-02.png" alt="感動をよくばれ"></p>
+      <p class="p-jra-tck-left__date"><img src="./assets/images/img-text-pc-left-01.png" alt="6.1SUN 15:40[G1] 日本ダービー"></p>
     </div>
   </div>
 
   <div class="p-jra-tck-main" id="top">
     <h1 class="p-jra-tck-kv">
-      <img src="./assets/images/img-kv.png" alt="">
+      <img src="./assets/images/img-kv.png" alt="感動をよくばれ JRA×TCKコラボキャンペーン">
     </h1>
 
     <div class="p-jra-tck-fv">
@@ -63,56 +66,23 @@ pageMeta = {
         </ul>
       </div>
 
-      <section class="c-user-entry">
-        <div class="c-user-entry__jra">
-          <div class="c-user-entry__contents">
-            <div class="c-user-entry__heading">
-              <h2 class="c-user-entry__ttl"><span>JRA</span><br>インターネット投票</h2>
-              <div class="c-user-entry__login">
-                <h3 class="c-user-entry__sub-ttl">既に会員の方</h3>
-                <p class="c-btn-shadow--green">
-                  <a href="" class="c-btn__link"><span>JRA インターネット<br>投票はこちら</span></a>
-                </p>
-                <p class="c-user-entry__bnr"><a href="" target="_blank"><img src="./assets/images/bnr/bnr-content-01.png" alt="UMACA"></a></p>
-              </div>
-            </div>
-            <div class="c-user-entry__join">
-              <h3 class="c-user-entry__sub-ttl">新規入会を<br>ご希望される方</h3>
-              <p class="c-btn-shadow--green">
-                <a href="" class="c-btn__link"><span>新規入会はこちら</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-user-entry__local">
-          <div class="c-user-entry__contents">
-            <div class="c-user-entry__heading">
-              <h2 class="c-user-entry__ttl"><span>地方競馬</span><br>インターネット投票</h2>
-              <div class="c-user-entry__login">
-                <h3 class="c-user-entry__sub-ttl">既に会員の方</h3>
-                <p class="c-user-entry__bnr"><a href="" target="_blank"><img src="./assets/images/bnr/bnr-content-02.png" alt="ネット投票×大井競馬場"></a></p>
-                <p class="c-user-entry__bnr"><a href="" target="_blank"><img src="./assets/images/bnr/bnr-content-03.png" alt="競馬ファンならSPATY"></a></p>
-              </div>
-            </div>
-            <div class="c-user-entry__join">
-              <h3 class="c-user-entry__sub-ttl">新規入会を<br>ご希望される方</h3>
-              <p class="c-btn-shadow--red">
-                <a href="" class="c-btn__link"><span>新規入会はこちら</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <%- include(pagePath + '/inc/_user-entry')%>
 
       <section class="p-jra-tck-feature" id="feature">
         <div class="p-jra-tck-feature__inner">
           <h2 class="p-jra-tck-feature__ttl">
-            <span><img src="./assets/images/icon/icon-header-logo.png" alt=""></span>
+            <span><img src="./assets/images/icon/icon-header-logo.png" alt="TCK 東京シティ競馬"></span>
             東京シティ競馬の魅力とは？
           </h2>
           <p class="p-jra-tck-feature__text">都心からアクセスが良く、夜空の下で繰り広げられるレースは幻想的。イベントも豊富で、競馬以外も楽しめるのが東京シティ競馬です！</p>
-          <p class="p-jra-tck-feature__link"><a href="">詳しく見る</a></p>
+            <div class="p-jra-tck-feature__accordion">
+              <div class="p-jra-tck-feature__accordion-content js-accordion-content">
+                <p class="p-jra-tck-feature__accordion-text">
+                  ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+                </p>
+              </div>
+              <p class="p-jra-tck-feature__btn js-accordion">詳しく見る</p>
+            </div>
         </div>
       </section>
     </div>
@@ -187,8 +157,40 @@ pageMeta = {
 
     <section class="p-jra-tck-apply" id="apply">
       <h2 class="p-jra-tck-apply__ttl">キャンペーン応募方法</h2>
-      <!-- スライダー -->
-      <p class="c-btn--modal"><a href="#modal" class="js-modal"><span>応募規約</span></a></p>
+      <div class="p-jra-tck-apply__slider-wrap">
+        <div class="p-jra-tck-apply__slider js-slider">
+          <div class="swiper-wrapper">
+            <div class="p-jra-tck-apply__slide swiper-slide">
+              <div class="p-jra-tck-apply__slide-inner">
+                <p class="p-jra-tck-apply__no--01"><img src="./assets/images/icon/icon-no-01.png" alt="01"></p>
+                <p class="p-jra-tck-apply__pic"><img src="./assets/images/img-apply-01.png" alt=""></p>
+                <p class="p-jra-tck-apply__text">「応募はこちら」ボタンから応募フォームへ</p>
+              </div>
+            </div>
+            <div class="p-jra-tck-apply__slide swiper-slide">
+              <div class="p-jra-tck-apply__slide-inner">
+                <p class="p-jra-tck-apply__no--02"><img src="./assets/images/icon/icon-no-02.png" alt="02"></p>
+                <p class="p-jra-tck-apply__pic"><img src="./assets/images/img-apply-02.png" alt=""></p>
+                <p class="p-jra-tck-apply__text">必要項目（氏名、メールアドレス）を入力</p>
+              </div>
+            </div>
+            <div class="p-jra-tck-apply__slide swiper-slide">
+              <div class="p-jra-tck-apply__slide-inner">
+                <p class="p-jra-tck-apply__no--03"><img src="./assets/images/icon/icon-no-03.png" alt="03"></p>
+                <p class="p-jra-tck-apply__pic"><img src="./assets/images/img-apply-02.png" alt=""></p>
+                <p class="p-jra-tck-apply__text">必要項目（氏名、メールアドレス）を入力</p>
+              </div>
+            </div>
+  
+          </div>
+          <div class="p-jra-tck-apply__nav">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+  
+        </div>
+      </div>
+      <p class="c-btn--modal"><a href="#modal01" class="js-modal-link"><span>応募規約</span></a></p>
       <p class="c-btn"><a href="#faq" class="js-anchor"><span>よくあるご質問</span></a></p>
     </section>
 
@@ -198,7 +200,7 @@ pageMeta = {
         <div class="p-jra-tck-schedule__wrap">
           <dt class="p-jra-tck-schedule__date"><span>6</span>月<span>1</span>日(日)</dt>
           <dd class="p-jra-tck-schedule__btn">
-            <a href="" class="p-jra-tck-schedule__link">
+            <a href="" class="p-jra-tck-schedule__link" target="_blank">
               <span class="p-jra-tck-schedule__label--green">JRA</span>
               日本ダービー
             </a>
@@ -207,7 +209,7 @@ pageMeta = {
         <div class="p-jra-tck-schedule__wrap">
           <dt class="p-jra-tck-schedule__date"><span>6</span>月<span>11</span>日(水)</dt>
           <dd class="p-jra-tck-schedule__btn">
-            <a href="" class="p-jra-tck-schedule__link">
+            <a href="https://www.tokyocitykeiba.com/race/grade_race/2025-06-11/" class="p-jra-tck-schedule__link" target="_blank">
               <span class="p-jra-tck-schedule__label--red">TCK</span>
               東京ダービー
             </a>
@@ -216,7 +218,7 @@ pageMeta = {
         <div class="p-jra-tck-schedule__wrap">
           <dt class="p-jra-tck-schedule__date"><span>6</span>月<span>15</span>日(日)</dt>
           <dd class="p-jra-tck-schedule__btn">
-            <a href="" class="p-jra-tck-schedule__link">
+            <a href="" class="p-jra-tck-schedule__link" target="_blank">
               <span class="p-jra-tck-schedule__label--green">JRA</span>
               宝塚記念
             </a>
@@ -225,7 +227,7 @@ pageMeta = {
         <div class="p-jra-tck-schedule__wrap">
           <dt class="p-jra-tck-schedule__date"><span>7</span>月<span>2</span>日(水)</dt>
           <dd class="p-jra-tck-schedule__btn">
-            <a href="" class="p-jra-tck-schedule__link">
+            <a href="https://www.tokyocitykeiba.com/race/grade_race/2025-07-02/" class="p-jra-tck-schedule__link" target="_blank">
               <span class="p-jra-tck-schedule__label--red">TCK</span>
               帝王賞
             </a>
@@ -234,7 +236,7 @@ pageMeta = {
         <div class="p-jra-tck-schedule__wrap">
           <dt class="p-jra-tck-schedule__date"><span>12</span>月<span>27</span>日(土)</dt>
           <dd class="p-jra-tck-schedule__btn">
-            <a href="" class="p-jra-tck-schedule__link">
+            <a href="" class="p-jra-tck-schedule__link" target="_blank">
               <span class="p-jra-tck-schedule__label--green">JRA</span>
               ホープフルステークス
             </a>
@@ -243,7 +245,7 @@ pageMeta = {
         <div class="p-jra-tck-schedule__wrap">
           <dt class="p-jra-tck-schedule__date"><span>12</span>月<span>28</span>日(日)</dt>
           <dd class="p-jra-tck-schedule__btn">
-            <a href="" class="p-jra-tck-schedule__link">
+            <a href="" class="p-jra-tck-schedule__link" target="_blank">
               <span class="p-jra-tck-schedule__label--green">JRA</span>
               有馬記念
             </a>
@@ -252,7 +254,7 @@ pageMeta = {
         <div class="p-jra-tck-schedule__wrap">
           <dt class="p-jra-tck-schedule__date"><span>12</span>月<span>29</span>日(月)</dt>
           <dd class="p-jra-tck-schedule__btn">
-            <a href="" class="p-jra-tck-schedule__link">
+            <a href="https://www.tokyocitykeiba.com/race/grade_race/2025-12-29/" class="p-jra-tck-schedule__link" target="_blank">
               <span class="p-jra-tck-schedule__label--red">TCK</span>
               東京大賞典
             </a>
@@ -287,7 +289,7 @@ pageMeta = {
       <h2 class="p-jra-tck-faq__ttl">よくあるご質問</h2>
       <div class="p-jra-tck-faq__accordion">
         <p class="p-jra-tck-faq__accordion-btn js-accordion">キャンペーンの参加方法について教えてください。<span class="p-jra-tck-faq__accordion-cross"></span></p>
-        <div class="p-jra-tck-faq__accordion-content">
+        <div class="p-jra-tck-faq__accordion-content js-accordion-content">
           <p class="p-jra-tck-faq__accordion-text">
             日本ダービー（6/1開催）または東京ダービー（6/11開催）、あるいは両方のレースで500円以上の馬券を購入し、その投票内容照会画像とともに必要事項をキャンペーンサイト内の応募フォームから送信してください。オンラインでの購入が対象となります。
           </p>
@@ -295,7 +297,7 @@ pageMeta = {
       </div>
       <div class="p-jra-tck-faq__accordion">
         <p class="p-jra-tck-faq__accordion-btn js-accordion">どのような馬券画像が応募対象になりますか？<span class="p-jra-tck-faq__accordion-cross"></span></p>
-        <div class="p-jra-tck-faq__accordion-content">
+        <div class="p-jra-tck-faq__accordion-content js-accordion-content">
           <p class="p-jra-tck-faq__accordion-text">
             SPAT4、即PAT、UMACAスマートで購入された馬券の投票内容照会画面の画像のみが対象となります。それ以外の方法（窓口や券売機を含む。）で購入された馬券は対象外となりますのでご注意ください。
           </p>
@@ -303,7 +305,7 @@ pageMeta = {
       </div>
       <div class="p-jra-tck-faq__accordion">
         <p class="p-jra-tck-faq__accordion-btn js-accordion">当選の発表はどのように行われますか？<span class="p-jra-tck-faq__accordion-cross"></span></p>
-        <div class="p-jra-tck-faq__accordion-content">
+        <div class="p-jra-tck-faq__accordion-content js-accordion-content">
           <p class="p-jra-tck-faq__accordion-text">
             日本ダービー（6/1開催）または東京ダービー（6/キャンペーン期間終了後に抽選を行い、当選者にのみキャンペーン事務局よりメールにて賞品送付のご案内をいたします。応募時に入力されたメールアドレスが無効の場合、ご案内ができませんのでご注意ください。
           </p>
@@ -311,7 +313,7 @@ pageMeta = {
       </div>
       <div class="p-jra-tck-faq__accordion">
         <p class="p-jra-tck-faq__accordion-btn js-accordion">複数回応募することはできますか？<span class="p-jra-tck-faq__accordion-cross"></span></dip>
-        <div class="p-jra-tck-faq__accordion-content">
+        <div class="p-jra-tck-faq__accordion-content js-accordion-content">
           <p class="p-jra-tck-faq__accordion-text">
             同一人物による複数応募は無効となります。お一人様1回のご応募でお願いいたします。日本ダービーと東京ダービー両方への応募は、1回の応募として扱われ、Wチャンスの抽選対象となります。
           </p>
@@ -319,7 +321,7 @@ pageMeta = {
       </div>
       <div class="p-jra-tck-faq__accordion">
         <p class="p-jra-tck-faq__accordion-btn js-accordion">当選した賞品を他の人に譲ることはできますか？<span class="p-jra-tck-faq__accordion-cross"></span></p>
-        <div class="p-jra-tck-faq__accordion-content">
+        <div class="p-jra-tck-faq__accordion-content js-accordion-content">
           <p class="p-jra-tck-faq__accordion-text">
             当選の権利を他人に譲渡することはできません。当選者ご本人のみが賞品を受け取ることができます。
           </p>
@@ -344,53 +346,13 @@ pageMeta = {
 
     <div class="p-jra-tck-bottom">
       
-      <section class="c-user-entry">
-        <div class="c-user-entry__jra">
-          <div class="c-user-entry__contents">
-            <div class="c-user-entry__heading">
-              <h2 class="c-user-entry__ttl"><span>JRA</span><br>インターネット投票</h2>
-              <div class="c-user-entry__login">
-                <h3 class="c-user-entry__sub-ttl">既に会員の方</h3>
-                <p class="c-btn-shadow--green">
-                  <a href="" class="c-btn__link"><span>JRA インターネット<br>投票はこちら</span></a>
-                </p>
-                <p class="c-user-entry__bnr"><a href="" target="_blank"><img src="./assets/images/bnr/bnr-content-01.png" alt="UMACA"></a></p>
-              </div>
-            </div>
-            <div class="c-user-entry__join">
-              <h3 class="c-user-entry__sub-ttl">新規入会を<br>ご希望される方</h3>
-              <p class="c-btn-shadow--green">
-                <a href="" class="c-btn__link"><span>新規入会はこちら</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="c-user-entry__local">
-          <div class="c-user-entry__contents">
-            <div class="c-user-entry__heading">
-              <h2 class="c-user-entry__ttl"><span>地方競馬</span><br>インターネット投票</h2>
-              <div class="c-user-entry__login">
-                <h3 class="c-user-entry__sub-ttl">既に会員の方</h3>
-                <p class="c-user-entry__bnr"><a href="" target="_blank"><img src="./assets/images/bnr/bnr-content-02.png" alt="ネット投票×大井競馬場"></a></p>
-                <p class="c-user-entry__bnr"><a href="" target="_blank"><img src="./assets/images/bnr/bnr-content-03.png" alt="競馬ファンならSPATY"></a></p>
-              </div>
-            </div>
-            <div class="c-user-entry__join">
-              <h3 class="c-user-entry__sub-ttl">新規入会を<br>ご希望される方</h3>
-              <p class="c-btn-shadow--red">
-                <a href="" class="c-btn__link"><span>新規入会はこちら</span></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <%- include(pagePath + '/inc/_user-entry')%>
 
       <section class="p-jra-tck-watch">
         <h2 class="p-jra-tck-watch__ttl">大井競馬のレース中継を<br>観るならこちら！</h2>
-        <p class="p-jra-tck-watch__bnr"><a href=""><img src="./assets/images/bnr/bnr-footer-01.png" alt="ウマきゅん"></a></p>
+        <p class="p-jra-tck-watch__bnr"><a href="https://www.youtube.com/channel/UCPSZn8iMXln9o89SpmeJ6wg" target="_blank"><img src="./assets/images/bnr/bnr-footer-01.png" alt="ウマきゅん"></a></p>
         <p class="p-jra-tck-watch__text">TOKYO MX2で大井競馬場 生中継</p>
-        <p class="p-jra-tck-watch__bnr"><a href=""><img src="./assets/images/bnr/bnr-footer-02.png" alt="TOKYO MX 30th ANNIVERSARY"></a></p>
+        <p class="p-jra-tck-watch__bnr"><a href="https://s.mxtv.jp/sports/tck/" target="_blank"><img src="./assets/images/bnr/bnr-footer-02.png" alt="TOKYO MX 30th ANNIVERSARY"></a></p>
       </section>
       
       <div class="c-footer-btn">
@@ -413,14 +375,90 @@ pageMeta = {
           <li class="l-nav__item"><a href="#contact" class="l-nav__link js-anchor">お問い合わせ</a></li>
         </ul>
         <ul class="l-nav__bnr">
-          <li class="l-nav__bnr-item"><a href="" class="l-nav__bnr-link"><img src="./assets/images/bnr/bnr-header-01.png" alt="テレビ・インターネット中継"></a></li>
-          <li class="l-nav__bnr-item"><a href="" class="l-nav__bnr-link"><img src="./assets/images/bnr/bnr-header-02.png" alt="競馬ファンなら SPATY"></a></li>
+          <li class="l-nav__bnr-item"><a href="https://www.tokyocitykeiba.com/guide/web_tv_radio/" class="l-nav__bnr-link" target="_blank"><img src="./assets/images/bnr/bnr-header-01.png" alt="テレビ・インターネット中継"></a></li>
+          <li class="l-nav__bnr-item"><a href="https://www.spat4.jp/keiba/pc" class="l-nav__bnr-link" target="_blank"><img src="./assets/images/bnr/bnr-header-02.png" alt="競馬ファンなら SPATY"></a></li>
         </ul>
       </nav>
-      <p class="p-jra-tck-left__date"><img src="./assets/images/img-text-pc-right.png" alt=""></p>
+      <p class="p-jra-tck-left__date"><img src="./assets/images/img-text-pc-right.png" alt="6.11 Wed 20:05[JpnI] 東京ダービー"></p>
     </div>
 
   </div>
-    
+
+  <div class="c-modal js-modal" id="modal01">
+    <div class="c-modal__inner">
+      <div class="c-modal__content">
+        #感動をよくばれキャンペーン規約<br>
+        事前に以下の応募要項を全てお読みいただき、ご同意いただいたうえで当キャンペーンにご応募ください。
+        <div class="c-modal__content-inner">
+          <div class="c-modal__content-scroll">
+            本規約は特別区競馬組合（以下「当組合」といいます）が提供する
+            「 #感動をよくばれキャンペーン」（以下「本キャンペーン」といいます）に関する諸条件を定めるものです。
+            本キャンペーンに応募するお客様（以下「応募者」といいます）は、本規約に同意の上ご応募ください。
+            【参加方法】
+            6/1(日)開催の日本ダービー、 6/11(水)開催の東京ダービー のいずれか、
+            または双方のレースの500円以上の投票内容照会画像、および必要項目をキャンペーンサイト内応募フォームより入力の上ご応募ください。
+            【馬券画像に関して】
+            下記サービスで購入された投票内容照会画面の画像のみを当選対象とさせていただきます。
+            ・即PAT
+            ・SPAT4
+            ※オフラインでの馬券画像は対象外となります。あらかじめご了承くださいませ。
+            【応募期間】
+            2025/5/31(土)00:00~6/14(土)23:59
+            【当選商品】
+            ▼6/1(日)開催の日本ダービー、 6/11(水)開催の東京ダービー のいずれかに参加の場合
+            　抽選で80名様にデジコポイント5,000円分をプレゼント。
+            ▼6/1(日)開催の日本ダービー、 6/11(水)開催の東京ダービー 双方に参加の場合
+            　抽選で80名様にデジコポイント5,000円分をプレゼント の権利に加え、
+            　Wチャンスとして、抽選で20名様にデジコポイント10,000円分をプレゼント。
+            【当選発表】
+            ・キャンペーン期間終了後に抽選を行います。追って当選者にのみ、キャンペーン事務局よりメールにて賞品の送付をいたします。
+            　入力メールアドレスが無効の場合にはご案内ができませんので、ご注意ください。
+             【注意事項】
+            ・同一人物の複数応募が確認された場合、ご応募は無効とさせていただきます。
+            ・アップロードした画像が不鮮明な場合、また入力内容にご応募は無効とさせていただきます。
+            ・当選の権利を他人に譲渡することはできません。
+            ・未成年の方は保護者の同意を得て応募してください。
+            ・応募にあたって必要な通信費等は応募者の負担となります。
+            ・本規約に定めのない事項については、当組合の判断により決定します。
+            ・本キャンペーンでは、事務局よりご連絡させていただく場合があります。
+             【禁止事項】
+            次の行為は禁止です。次のいずれかに該当する場合、応募を無効とします。
+            ・本規約に関する違反行為
+            ・第三者の財産、著作権などの権利、プライバシーもしくは肖像権を侵害する行為、またはその恐れのある行為
+            ・法令に違反する行為、または公序良俗に反する行為
+            ・当組合の提供するサービス以外に宣伝、営業行為またはそれに準ずる恐れのある行為
+            ・本キャンペーンの運営を妨げる行為
+            ・実在または架空の第三者になりすまして応募する行為
+            ・上記に準ずる行為など、本キャンペーンの趣旨に鑑みて当組合が不適切と判断する行為
+            【免責事項等】
+            ・やむを得ない事情などにより、本キャンペーンの変更・中止または本規約の変更をすることがあります。このことにより生じた損害
+            または不利益について、当組合は一切の責任を負わないものとします。
+            ・当組合は当社の故意または重大な過失による場合を除き、本キャンペーンの運営または応募に関して生じた損害または不利益について、当組合は一切の責任を負わないものとします。
+            ・本規約の準拠法は日本法とし、万一当組合と応募者との間で紛争が起きた場合、東京地方裁判所を第一審の専属的管轄裁判所とします。
+          
+            【個人情報の取り扱い】
+            当組合は、本キャンペーンの中で応募者から取得した個人情報を次の通り適切に取り扱います。
+            ・取得した個人情報は本キャンペーンの運営（ご本人への連絡を含む）のみに利用します。
+            ・個人情報保護管理体制について一定の水準に達していると当組合が判断した会社に対して、利用目的の達成に必要な範囲内で個人情報の取り扱いを委託する場合があります。
+            ・当組合に対して本件に関する個人情報の使用目的の通知、開示、第三者提供記録の開示、内容の訂正、追加または削除、利用の停止、
+            消去および第三者への提供の停止に関して、下記のキャンペーン事務局に申し出ることができます。その際、当組合はご本人を確認させていただいた上で、合理的な期間内に対応します。
+            ・応募者が当組合に個人情報を提供されるかどうかは任意によるものです。ただし、必要な項目をいただけない場合、適切な対応ができない場合があります。
+            ・当組合サイト上では（お客様に最適なサービスを提供するため）クッキー、Webビーコン等を使用しています。
+            ・その他個人情報やクッキーの取り扱いに関する詳細は当組合リーガル
+            ≪ https://www.tokyocitykeiba.com/legal ≫をご覧ください。
+          
+            【キャンペーンに関するお問い合わせ先】
+            キャンペーンに関する問い合わせ先は次のとおりです。
+            なお、応募受付の確認、審査に関するお問い合わせについては回答いたしかねます。
+          
+             #感動をよくばれキャンペーン事務局（株式会社CARTA MARKETING FIRM 内)
+            tck_jra_campaign@cartahd.com
+            本キャンペーンは当組合が企画し、株式会社CARTA MARKETING FIRMが主体となって運営しております。
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="c-modal__overlay js-modal-close"></button>
+  </div>
 </main>
 <%- include(pagePath + '/inc/_footer' , { pagePath: pagePath, pageSlug: pageSlug }) %>

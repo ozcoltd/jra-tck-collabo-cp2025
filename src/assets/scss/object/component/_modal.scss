@@ -1,0 +1,81 @@
+@use "../../global/mixin" as *;
+@use "../../global/setting" as *;
+
+.c-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1010;
+    transition: opacity .1s, visibility .1s ease;
+  
+    &.is-open {
+      visibility: visible;
+      opacity: 1;
+    }
+    &__inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70%;
+    }
+    &__close {
+      position: absolute;
+      top: 24px;
+      right: 16px;
+    }
+    &__content {
+      position: relative;
+      width: calc(100vw - 32px);
+      max-height: 100%;
+      padding: vw(24);
+      background: #fff;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 10px;
+      @include pc {
+        padding: w500(24);
+        max-width: calc(500px - 32px);
+      }
+    }
+    &__content-inner {
+        padding: 1em 0 1em 1em;
+        border-radius: 6px;
+        background: #f0f0f0;
+        flex: 1 0 0%;
+        overflow: hidden;
+    }
+    &__content-scroll {
+        padding-right: 1em;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    &__heading {
+      margin-bottom: 32px;
+    }
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background: rgba(56, 56, 56, .6);
+      z-index: -1;
+    }
+  }

@@ -1,6 +1,34 @@
 @use "../../global/mixin" as *;
 @use "../../global/setting" as *;
 
+.p-jra-tck-op {
+    display: none;
+    pointer-events: none;
+    @include pc {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        transition: .5s;
+    }
+    &__pic {
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &.is-end {
+        opacity: 0;
+    }
+    &.is-hidden {
+        display: none;
+    }
+}
+
 .p-jra-tck-left {
     padding-top: 64px;
     position: fixed;
@@ -45,6 +73,8 @@
 
 .p-jra-tck-main {
     padding-top: vw(58);
+
+    overflow-x: clip;
     @include pc {
         margin: 0 auto;
         padding-top: 0;
@@ -80,10 +110,8 @@
         width: calc((100% / 3) - 5px);
         position: relative;
         &.is-disabled {
-            .p-jra-tck-anchor__link {
-                opacity: .4;
-                pointer-events: none;
-            }
+            opacity: .4;
+            pointer-events: none;
             .p-jra-tck-anchor__box {
                 &::after {
                     display: none;
@@ -226,27 +254,49 @@
             margin-bottom: w500(18);
         }
     }
-    &__link {
+    &__accordion {
+        @include pc {
+            border-radius: w500(8);
+        }
+        & + & {
+            margin-top: vw(8);
+            @include pc {
+                margin-top: w500(8);
+            }
+        }
+    }
+    &__btn {
         width: fit-content;
         margin: 0 auto;
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            color: #777;
-            font-weight: bold;
-            &::after {
-                content: '';
-                display: block;
-                width: vw(16);
-                height: vw(16);
-                background: url('./../images/icon/icon-more.png') center / contain no-repeat;
-                @include pc {
-                    width: w500(16);
-                    height: w500(16);
-                }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: #777;
+        font-weight: bold;
+        cursor: pointer;
+        &::after {
+            content: '';
+            display: block;
+            width: vw(16);
+            height: vw(16);
+            background: url('./../images/icon/icon-more.png') center / contain no-repeat;
+            @include pc {
+                width: w500(16);
+                height: w500(16);
             }
+        }
+    }
+    &__accordion-content {
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+    &__accordion-text {
+        padding: vw(16) 0;
+        @include pc {
+            padding: w500(16) 0;
         }
     }
 }
@@ -480,6 +530,7 @@
         padding: w500(56) w500(16);
     }
     &__ttl {
+        margin-bottom: vw(38);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -488,6 +539,7 @@
         font-size: vw(20);
         font-weight: bold;
         @include pc {
+            margin-bottom: w500(38);
             gap: w500(24);
             font-size: w500(20);
         }
@@ -505,6 +557,110 @@
         }
         &::after {
             transform: scaleX(-1);
+        }
+    }
+    &__slider-wrap {
+        position: relative;
+    }
+    &__slider {
+        margin-bottom: vw(96);
+        width: 100%;
+        height: vw(300);
+        @include pc {
+            height: w500(300);
+            margin-bottom: w500(96);
+        }
+    }
+    &__slide {
+        padding-top: vw(12);
+        color: #fff;
+        position: relative;
+        @include pc {
+            padding-top: w500(12);
+        }
+    }
+    &__slide-inner {
+        padding: vw(32) vw(24);
+        height: 100%;
+        background: $black;
+        @include pc {
+            padding: w500(32) w500(24);
+        }
+    }
+    &__no {
+        position: absolute;
+        top: 0;
+        left: vw(16);
+        @include pc {
+            left: w500(16);
+        }
+        &--01 {
+            @extend .p-jra-tck-apply__no;
+            max-width: vw(25);
+            @include pc {
+                max-width: w500(25);
+            }
+        }
+        &--02 {
+            @extend .p-jra-tck-apply__no;
+            max-width: vw(29);
+            @include pc {
+                max-width: w500(29);
+            }
+        }
+        &--03 {
+            @extend .p-jra-tck-apply__no;
+            max-width: vw(29);
+            @include pc {
+                max-width: w500(29);
+            }
+        }
+    }
+    &__nav {
+        width: vw(72);
+        position: absolute;
+        right: vw(8);
+        bottom: vw(-40);
+        @include pc {
+            width: w500(72);
+            right: w500(8);
+            bottom: w500(-40);
+        }
+
+        .swiper-button-prev, 
+        .swiper-button-next {
+            width: vw(32);
+            height: vw(32);
+            top: auto;
+            @include pc {
+                width: w500(32);
+                height: w500(32);
+            }
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: url('./../images/icon/icon-arrow-04.png') center / contain no-repeat;
+            }
+            &.swiper-button-disabled {
+                opacity: .4;
+            }
+        }
+        .swiper-button-prev {
+            left: 0;
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+    &__pic {
+        margin-bottom: vw(16);
+        @include pc {
+            margin-bottom: w500(16);
         }
     }
 }
@@ -727,6 +883,7 @@
         }
     }
     &__accordion {
+        background: #fff;
         border-radius: vw(8);
         box-shadow: 0 0 8px rgba(17, 17, 17, 0.08);
         @include pc {

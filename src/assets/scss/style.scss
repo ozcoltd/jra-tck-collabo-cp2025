@@ -1,22 +1,25 @@
 @charset "UTF-8";
 
+// 基本設定
 @use "./foundation/reset";
 @use "./foundation/base";
 
-
+// グローバル設定
 @use "./global/setting";
 @use "./global/mixin";
 
 
+// レイアウト
 @use "./layout/footer";
 @use "./layout/header";
 @use "./layout/nav";
 
-
+// コンポーネント
 @use "./object/component/btn";
 @use "./object/component/note";
+@use "./object/component/modal";
 @use "./object/project/user-entry";
 @use "./object/project/p-jra-tck";
 
-
+// ユーティリティ
 @use "./utility/utility";

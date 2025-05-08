@@ -11,6 +11,6 @@ export default {
     path: path.join(__dirname, 'htdocs/assets/js')
   },
   optimization: {
-    minimize: false
+    minimize: true
   },
 };

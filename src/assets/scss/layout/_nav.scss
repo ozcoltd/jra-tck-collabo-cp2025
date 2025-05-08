@@ -26,6 +26,12 @@
             position: relative;
             top: -1px;
         }
+        &.is-disabled {
+            &::before {
+                content: '';
+                opacity: .4;
+            }
+        }
     }
     &__bnr {
         display: flex;
