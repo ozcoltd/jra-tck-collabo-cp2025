@@ -4,7 +4,7 @@ pageSlug = '',
 pageMeta = {
   title:'感動をよくばれ JRA×TCKコラボキャンペーン',
   description:'感動をよくばれ JRA×TCKコラボキャンペーン',
-  keywords:'キーワード'
+  keywords:'東京シティ競馬,JRA,日本中央競馬会,TCK'
 }
 %>
 <%- include(pagePath + '/inc/_header' , { pagePath: pagePath, pageSlug: pageSlug, pageMeta: pageMeta }) %>
@@ -66,7 +66,7 @@ pageMeta = {
         </ul>
       </div>
 
-      <%- include(pagePath + '/inc/_user-entry')%>
+      <%- include(pagePath + '/component/_user-entry')%>
 
       <section class="p-jra-tck-feature" id="feature">
         <div class="p-jra-tck-feature__inner">
@@ -76,11 +76,11 @@ pageMeta = {
           </h2>
           <p class="p-jra-tck-feature__text">都心からアクセスが良く、夜空の下で繰り広げられるレースは幻想的。イベントも豊富で、競馬以外も楽しめるのが東京シティ競馬です！</p>
             <div class="p-jra-tck-feature__accordion">
-              <div class="p-jra-tck-feature__accordion-content js-accordion-content">
+              <!-- <div class="p-jra-tck-feature__accordion-content js-accordion-content">
                 <p class="p-jra-tck-feature__accordion-text">
                   ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
                 </p>
-              </div>
+              </div> -->
               <p class="p-jra-tck-feature__btn js-accordion">詳しく見る</p>
             </div>
         </div>
@@ -312,7 +312,7 @@ pageMeta = {
         </div>
       </div>
       <div class="p-jra-tck-faq__accordion">
-        <p class="p-jra-tck-faq__accordion-btn js-accordion">複数回応募することはできますか？<span class="p-jra-tck-faq__accordion-cross"></span></dip>
+        <p class="p-jra-tck-faq__accordion-btn js-accordion">複数回応募することはできますか？<span class="p-jra-tck-faq__accordion-cross"></span></p>
         <div class="p-jra-tck-faq__accordion-content js-accordion-content">
           <p class="p-jra-tck-faq__accordion-text">
             同一人物による複数応募は無効となります。お一人様1回のご応募でお願いいたします。日本ダービーと東京ダービー両方への応募は、1回の応募として扱われ、Wチャンスの抽選対象となります。
@@ -333,7 +333,7 @@ pageMeta = {
       <div class="p-jra-tck-contact__inner">
         <h2 class="p-jra-tck-contact__ttl">キャンペーンに関する<br>お問い合わせ先</h2>
         <p class="p-jra-tck-contact__sub">
-          <span class="u-font-bold">#感動をよくばれキャンペーン事務局</span><br>
+          <span class="u-font-bold u-font-large">#感動をよくばれキャンペーン事務局</span><br>
           （株式会社CARTA MARKETING FIRM 内）
         </p>
         <p class="p-jra-tck-contact__mail">tck_jra_campaign@cartahd.com</p>
@@ -346,7 +346,7 @@ pageMeta = {
 
     <div class="p-jra-tck-bottom">
       
-      <%- include(pagePath + '/inc/_user-entry')%>
+      <%- include(pagePath + '/component/_user-entry')%>
 
       <section class="p-jra-tck-watch">
         <h2 class="p-jra-tck-watch__ttl">大井競馬のレース中継を<br>観るならこちら！</h2>
@@ -367,12 +367,12 @@ pageMeta = {
       <nav class="l-nav">
         <ul class="l-nav__list">
           <li class="l-nav__item"><a href="#top" class="l-nav__link js-anchor">TOP</a></li>
-          <li class="l-nav__item"><a href="#feature" class="l-nav__link js-anchor">東京シティ競馬の魅力とは？</a></li>
-          <li class="l-nav__item"><a href="#campaign" class="l-nav__link js-anchor">感動をよくばれキャンペーン</a></li>
-          <li class="l-nav__item"><a href="#apply" class="l-nav__link js-anchor">応募方法</a></li>
-          <li class="l-nav__item"><a href="#info" class="l-nav__link js-anchor">リアルイベント情報</a></li>
-          <li class="l-nav__item"><a href="#faq" class="l-nav__link js-anchor">よくあるご質問</a></li>
-          <li class="l-nav__item"><a href="#contact" class="l-nav__link js-anchor">お問い合わせ</a></li>
+          <li class="l-nav__item"><a href="#feature" class="l-nav__link js-anchor is-disabled">東京シティ競馬の魅力とは？</a></li>
+          <li class="l-nav__item"><a href="#campaign" class="l-nav__link js-anchor is-disabled">感動をよくばれキャンペーン</a></li>
+          <li class="l-nav__item"><a href="#apply" class="l-nav__link js-anchor is-disabled">応募方法</a></li>
+          <li class="l-nav__item"><a href="#info" class="l-nav__link js-anchor is-disabled">リアルイベント情報</a></li>
+          <li class="l-nav__item"><a href="#faq" class="l-nav__link js-anchor is-disabled">よくあるご質問</a></li>
+          <li class="l-nav__item"><a href="#contact" class="l-nav__link js-anchor is-disabled">お問い合わせ</a></li>
         </ul>
         <ul class="l-nav__bnr">
           <li class="l-nav__bnr-item"><a href="https://www.tokyocitykeiba.com/guide/web_tv_radio/" class="l-nav__bnr-link" target="_blank"><img src="./assets/images/bnr/bnr-header-01.png" alt="テレビ・インターネット中継"></a></li>
@@ -389,9 +389,8 @@ pageMeta = {
       <div class="c-modal__content">
         #感動をよくばれキャンペーン規約<br>
         事前に以下の応募要項を全てお読みいただき、ご同意いただいたうえで当キャンペーンにご応募ください。
-        <div class="c-modal__content-inner">
-          <div class="c-modal__content-scroll">
-            本規約は特別区競馬組合（以下「当組合」といいます）が提供する
+
+        本規約は特別区競馬組合（以下「当組合」といいます）が提供する
             「 #感動をよくばれキャンペーン」（以下「本キャンペーン」といいます）に関する諸条件を定めるものです。
             本キャンペーンに応募するお客様（以下「応募者」といいます）は、本規約に同意の上ご応募ください。
             【参加方法】
@@ -454,8 +453,6 @@ pageMeta = {
              #感動をよくばれキャンペーン事務局（株式会社CARTA MARKETING FIRM 内)
             tck_jra_campaign@cartahd.com
             本キャンペーンは当組合が企画し、株式会社CARTA MARKETING FIRMが主体となって運営しております。
-          </div>
-        </div>
       </div>
     </div>
     <button class="c-modal__overlay js-modal-close"></button>

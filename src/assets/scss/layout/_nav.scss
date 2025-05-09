@@ -14,6 +14,9 @@
     }
     &__item {
         margin-top: min(calc(16 / 1366 * 100vw), 16px);
+
+    }
+    &__link {
         &::before {
             content: '';
             margin-right: min(calc(16 / 1366 * 100vw), 16px);

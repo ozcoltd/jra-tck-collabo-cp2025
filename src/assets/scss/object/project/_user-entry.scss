@@ -2,10 +2,11 @@
 @use "../../global/setting" as *;
 
 .c-user-entry {
-    padding: 0 9px;
+    padding: 0 vw(9);
     display: flex;
     justify-content: space-between;
     @include pc {
+        padding: 0 w500(9);
     }
     &__jra,
     &__local {

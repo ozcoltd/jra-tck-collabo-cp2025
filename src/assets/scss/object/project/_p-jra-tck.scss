@@ -84,22 +84,25 @@
 }
 
 .p-jra-tck-fv {
-    padding: vw(45) 0 vw(73);
+    padding-top: vw(45);
     background:
     url('./../images/bg/bg-fv-content-bottom.png') center bottom no-repeat,
     url('./../images/bg/bg-fv-content.png') repeat;
-    background-size: 100% vw(66), 100% vw(1040);
+    height: vw(1039);
+    background-size: 100% vw(66), 100% vw(1039);
     @include pc {
-        padding: w500(45) 0 w500(73);
-        background-size: 100% w500(66), 100% w500(1040);
+        height: w500(1039);
+        padding-top: w500(45);
+        background-size: 100% w500(66), 100% w500(1039);
     }   
 }
 
 .p-jra-tck-anchor {
     margin-bottom: vw(56);
-    padding: 0 16px;
+    padding: 0 vw(16);
     @include pc {
         margin-bottom: w500(56);
+        padding: 0 w500(16);
     }
     &__list {
         display: flex;
@@ -302,11 +305,11 @@
 }
 
 .p-jra-tck-campaign {
-    padding: vw(57) 16px vw(56);
+    padding: vw(57) vw(16) vw(56);
     background: $black;
     color: #fff;
     @include pc {
-        padding: w500(57) 16px w500(56);
+        padding: w500(57) w500(16) w500(56);
     }
     &__ttl {
         margin-bottom: vw(12);
@@ -524,7 +527,7 @@
 }
 
 .p-jra-tck-apply {
-    padding: vw(56) 16px;
+    padding: vw(56) vw(16);
     background: $gray;
     @include pc {
         padding: w500(56) w500(16);
@@ -666,7 +669,7 @@
 }
 
 .p-jra-tck-schedule {
-    padding: vw(56) 16px;
+    padding: vw(56) vw(16);
     @include pc {
         padding: w500(56) w500(16);
     }
@@ -786,7 +789,7 @@
 }
 
 .p-jra-tck-info {
-    padding: vw(56) 16px;
+    padding: vw(56) vw(16);
     background: url('./../images/bg/bg-info.png') center / cover no-repeat;
     @include pc {
         padding: w500(56) w500(16);
@@ -848,7 +851,7 @@
 }
 
 .p-jra-tck-faq {
-    padding: vw(56) 16px;
+    padding: vw(56) vw(16);
     background: #F9F9F9;
     @include pc {
         padding: w500(56) w500(16);
@@ -983,15 +986,15 @@
 }
 
 .p-jra-tck-contact {
-    padding: vw(56) 16px;
+    padding: vw(56) vw(16) vw(60);
     @include pc {
-        padding: w500(56) w500(16);
+        padding: w500(56) w500(16) w500(60);
     }
     &__inner {
-        padding: vw(24);
+        padding: vw(24) vw(24) vw(32);
         background: #F9F9F9;
         @include pc {
-            padding: w500(24);
+            padding: w500(24) w500(24) w500(32);
         }
     }
     &__ttl {
@@ -1001,6 +1004,7 @@
         font-weight: bold;
         text-align: center;
         border-bottom: 1px solid #ccc;
+        line-height: 1.5;
         @include pc {
             margin-bottom: w500(16);
             padding-bottom: w500(16);
@@ -1010,8 +1014,16 @@
     &__sub {
         margin-bottom: vw(8);
         text-align: center;
+        font-size: vw(12);
         @include pc {
             margin-bottom: w500(8);
+            font-size: w500(12);
+        }
+        .u-font-large {
+            font-size: vw(14);
+            @include pc {
+                font-size: w500(14);
+            }
         }
     }
     &__mail {
