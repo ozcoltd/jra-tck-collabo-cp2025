@@ -18,13 +18,16 @@ export function Modal() {
   });
 
   modal.forEach(elm => {
-    const closeBtn = elm.querySelector('.js-modal-close');
-    closeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = closeBtn.parentNode;
-      target.classList.remove('is-open');
-      html.classList.remove('is-modal-open');
-      focusElm.focus();
+    const closeBtn = elm.querySelectorAll('.js-modal-close');
+    closeBtn.forEach(elm => {
+      elm.addEventListener("click", function(e){
+        e.preventDefault();
+        const target = this.closest('.js-modal');
+        target.classList.remove('is-open');
+        html.classList.remove('is-modal-open');
+        focusElm.focus();
+      });
     });
+      
   });
 }

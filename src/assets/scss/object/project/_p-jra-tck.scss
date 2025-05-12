@@ -13,13 +13,16 @@
         bottom: 0;
         z-index: 9999;
         transition: .5s;
+        // background: #fff;
     }
     &__pic {
         height: 100%;
-        img {
-            height: 100%;
-            object-fit: cover;
-        }
+        display: flex;
+        align-items: center;
+        // img {
+        //     height: 100%;
+        //     object-fit: cover;
+        // }
     }
     &.is-end {
         opacity: 0;
