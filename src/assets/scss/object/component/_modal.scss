@@ -27,7 +27,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 70%;
+      height: calc(100dvh - 80px);
+      @include pc {
+        height: 70%;
+      }
     }
     &__close {
       position: absolute;
@@ -35,20 +38,116 @@
       right: 16px;
     }
     &__content {
-      overflow: auto;
-      position: relative;
+      padding: vw(20);
       width: calc(100vw - 32px);
       max-height: 100%;
-      padding: vw(24);
       background: #fff;
+      border-radius: vw(8);
+      overflow: auto;
+      position: relative;
       z-index: 10;
       @include pc {
-        padding: w500(24);
-        max-width: calc(500px - 32px);
+        padding: w500(20);
+        max-width: calc(500px - 40px);
+        border-radius: w500(8);
+      }
+    }
+    &__ttl {
+      margin-bottom: vw(20);
+      font-size: vw(18);
+      font-weight: bold;
+      text-align: center;
+      @include pc {
+        margin-bottom: w500(20);
+        font-size: w500(18);
       }
     }
     &__heading {
-      margin-bottom: 32px;
+      margin-bottom: vw(12);
+      @include pc {
+        margin-bottom: w500(12);
+      }
+    }
+    &__heading-notes {
+      margin-bottom: vw(12);
+      color: $gray;
+      @include pc {
+        margin-bottom: w500(12);
+      }
+    }
+    &__item {
+      margin-top: vw(12);
+      @include pc {
+        margin-top: w500(12);
+      }
+      dt {
+        font-weight: normal;
+        &::before {
+          content: '●';
+          margin-right: vw(4);
+          @include pc {
+            margin-right: w500(4);
+          }
+        }
+      }
+      dd {
+        margin-left: vw(18);
+        @include pc {
+          margin-left: w500(18);
+        }
+      }
+    }
+    &__list {
+      li {
+        &::before {
+          content: '・';
+        }
+      }
+    }
+    &__notes {
+      margin-top: vw(12);
+      @include pc {
+        margin-top: w500(12);
+      }
+      li {
+        padding-left: vw(11);
+        font-size: vw(12);
+        position: relative;
+        @include pc {
+        padding-left: w500(11);
+        font-size: w500(12);
+        }
+        &::before {
+          content: '※';
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+    &__contact {
+      margin-top: vw(20);
+      @include pc {
+        margin-top: w500(20);
+      }
+    }
+    &__contact-ttl {
+      font-size: vw(16);
+      color: #004AA0;
+      font-weight: bold;
+      @include pc {
+        font-size: w500(16);
+      }
+    }
+    &__text {
+      margin-top: vw(12);
+      @include pc {
+        margin-top: w500(12);
+      }
+    }
+    &__link {
+      &--mail {
+        text-decoration: underline;
+      }
     }
     &__overlay {
       position: absolute;
@@ -59,7 +158,7 @@
       width: 100%;
       height: 100%;
       cursor: pointer;
-      background: rgba(56, 56, 56, .6);
+      background: rgba(51, 51, 51, 0.8);
       z-index: -1;
     }
   }

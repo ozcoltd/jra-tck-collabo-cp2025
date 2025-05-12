@@ -7,7 +7,7 @@
     max-width: 332px;
     padding: 0 20px;
     &__list {
-        margin-bottom: min(calc(74 / 1366 * 100vw), 74px);
+        margin-bottom: min(calc(42 / 1366 * 100vw), 42px);
         font-size: min(calc(16 / 1366 * 100vw), 16px);
         color: #fff;
         font-weight: bold;
@@ -36,13 +36,11 @@
             }
         }
     }
-    &__bnr {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
     &__bnr-item {
-        max-width: 142px;
+        max-width: 232px;
+        & + & {
+            margin-top: min(calc(20 / 1366 * 100vw), 20px);
+        }
     }
     
 }

@@ -1,0 +1,10 @@
+@use "../../global/mixin" as *;
+@use "../../global/setting" as *;
+
+.c-coming-soon-image {
+    margin: 0 auto;
+    max-width: vw(200);
+    @include pc {
+        max-width: w500(200);
+    }
+}
