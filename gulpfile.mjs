@@ -65,7 +65,7 @@ const jsTask = async () => {
 
 const imagesTask = () => {
   return gulp
-    .src(`${srcDir}/assets/images/**/*.{jpg,jpeg,png,gif}`, { encoding: false })
+    .src(`${srcDir}/assets/images/**/*.{jpg,jpeg,png,gif,ico}`, { encoding: false })
     .pipe(changed(`${destDir}/assets/images`))
     .pipe(imagemin([
       imageminMozjpeg({ quality: 65, progressive: true }),
@@ -79,7 +79,7 @@ const watchFiles = () => {
   gulp.watch(`${srcDir}/assets/scss/**/*.scss`, compileSass);
   gulp.watch(`${srcDir}/assets/js/**/*.js`, jsTask);
   gulp.watch(`${srcDir}/ejs/**/*.ejs`, ejsTask);
-  gulp.watch(`${srcDir}/assets/images/**/*.{jpg,jpeg,png,gif}`, imagesTask);
+  gulp.watch(`${srcDir}/assets/images/**/*.{jpg,jpeg,png,gif,ico}`, imagesTask);
   gulp.watch(`${destDir}/**/*.html`).on('change', browserSync.reload);
 };
 

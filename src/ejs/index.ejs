@@ -2,16 +2,32 @@
 const pagePath = '.',
 pageSlug = '',
 pageMeta = {
-  title:'感動をよくばれ JRA×TCKコラボキャンペーン',
-  description:'感動をよくばれ JRA×TCKコラボキャンペーン',
-  keywords:'東京シティ競馬,JRA,日本中央競馬会,TCK'
+  title:'JRA×TCK #感動をよくばれキャンペーン',
+  description:'JRAと東京シティ競馬（TCK）のコラボレーションキャンペーン。対象レースの馬券を500円以上購入すると抽選でデジタルギフトが当たる！両方購入でWチャンスも。',
+  descriptionTwitter:'JRAと東京シティ競馬の対象レース馬券購入で抽選でデジタルギフトが当たる！両方購入でWチャンス！',
+  keywords:'JRA,TCK,東京シティ競馬,競馬,キャンペーン,日本ダービー,東京ダービー,宝塚記念,帝王賞,有馬記念,ホープフルステークス,東京大賞典,デジタルギフト'
 }
 %>
 <%- include(pagePath + '/inc/_header' , { pagePath: pagePath, pageSlug: pageSlug, pageMeta: pageMeta }) %>
 <main>
   <div class="p-jra-tck-op js-animation is-hidden">
-    <p class="p-jra-tck-op__pic"><img src="./assets/images/img-fv.png" alt="感動をよくばれ JRA×TCKコラボキャンペーン"></p>
+    <div class="p-jra-tck-op__bg"></div>
+    <div class="p-jra-tck-op__wrap">
+      <div class="p-jra-tck-op__left">
+        <p class="p-jra-tck-op__pic--left"><img src="./assets/images/icon/icon-haeder-logo-pc.svg" alt="TCK 東京シティ競馬"></p>
+        <p class="p-jra-tck-op__pic--left-bottom"><img src="./assets/images/img-text-pc-left-01.png" alt="6.1SUN 15:40[G1] 日本ダービー"></p>
+      </div>
+      <div class="p-jra-tck-op__center">
+        <p class="p-jra-tck-op__pic"><img src="./assets/images/img-fv-center.png" alt="感動をよくばれ"></p>
+        <p class="p-jra-tck-op__pic--center-bottom"><img src="./assets/images/img-fv-bottom.png" alt="JRA×TCKコラボキャンペーン"></p>
+      </div>
+      <div class="p-jra-tck-op__right">
+        <p class="p-jra-tck-op__pic--right"><img src="./assets/images/img-fv-copy.png" alt="二つの頂点。二つの伝説。"></p>
+        <p class="p-jra-tck-op__pic--right-bottom"><img src="./assets/images/img-text-pc-right.png" alt="6.11 Wed 20:05[JpnI] 東京ダービー"></p>
+      </div>
+    </div>
   </div>
+  
   <div class="p-jra-tck-left u-nosp">
     <div class="p-jra-tck-left__wrap">
       <p class="p-jra-tck-left__text"><img src="./assets/images/img-text-pc-left-02.png" alt="感動をよくばれ"></p>

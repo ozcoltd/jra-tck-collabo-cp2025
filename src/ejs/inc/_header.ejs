@@ -3,6 +3,7 @@
 var metaSiteTitle = '',
 metaTitle = pageMeta.title,
 metaDescription = pageMeta.description,
+metaTwitterDescription = pageMeta.descriptionTwitter,
 metaKeywords = pageMeta.keywords;
 if (metaTitle == ''){ var metaTitle = '【タイトルを設定してください】' }
 if (metaDescription == ''){ var metaDescription = '' }
@@ -11,6 +12,13 @@ if (metaKeywords == ''){ var metaKeywords = '' }
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WRLZH4N3');</script>
+      <!-- End Google Tag Manager -->
       <!-- // meta -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -23,15 +31,15 @@ if (metaKeywords == ''){ var metaKeywords = '' }
       <!-- // OGP -->
       <meta property="og:site_name" content="<%= metaTitle %>">
       <meta property="og:title" content="<%= metaTitle %>">
-      <meta property="og:description" content="<%= metaDescription %>">
+      <meta property="og:description" content="<%= metaTitle %>">
       <meta property="og:type" content="website">
       <meta property="og:url" content="https://jra-tck-collabo-cp2025/">
-      <meta property="og:image" content="./assets/images/ogp.png">
+      <meta property="og:image" content="https://jra-tck-collabo-cp2025/assets/images/ogp.png">
       <!-- Twitter Cards設定 -->
       <meta name="twitter:title" content="<%= metaTitle %>">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:description" content="<%= metaDescription %>">
-      <meta name="twitter:image" content="./assets/images/ogp.png">
+      <meta name="twitter:description" content="<%= metaTwitterDescription %>">
+      <meta name="twitter:image" content="https://jra-tck-collabo-cp2025/assets/images/ogp.png">
       <!-- // google font -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +49,10 @@ if (metaKeywords == ''){ var metaKeywords = '' }
       <link href="/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRLZH4N3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <header class="l-header" id="js-header">
       <div class="l-header__logo">
             <a href="https://www.tokyocitykeiba.com" target="_blank">

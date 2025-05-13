@@ -7,7 +7,7 @@ export function Animation() {
     //     return;
     // }
 
-    const delay = 2000;
+    const delay = 3000;
     let timeoutTask;
     const ua = navigator.userAgent;
     const uaData = navigator.userAgentData;
@@ -26,7 +26,7 @@ export function Animation() {
         if(elm) elm.classList.remove('is-hidden');
     }
 
-    //ユーザスクロール操作、2秒経過でファーストビューがフェードアウト
+    //ユーザスクロール操作、delayの数値分経過でファーストビューがフェードアウト
     window.addEventListener('load', () => {
         requestAnimationFrame(() => {
             const sy = window.scrollY;
