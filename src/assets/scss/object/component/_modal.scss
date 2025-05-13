@@ -41,10 +41,11 @@
       max-width: vw(40);
       position: absolute;
       top: vw(-52);
-      right: 0;
+      right: vw(12);
       @include pc {
         max-width: w500(40);
         top: w500(-52);
+        right: w500(12);
       }
 
     }
