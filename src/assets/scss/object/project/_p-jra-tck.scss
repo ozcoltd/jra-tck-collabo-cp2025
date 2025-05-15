@@ -535,10 +535,10 @@
         }
     }
     &__race-name {
-        margin-bottom: vw(32);
+        margin-bottom: vw(30);
         text-align: center;
         @include pc {
-            margin-bottom: w500(32);
+            margin-bottom: w500(30);
         }
     }
     &__race {
@@ -569,6 +569,27 @@
                     width: w500(32);
                     height: w500(32);
                 }
+            }
+        }
+    }
+    &__content-text {
+        font-size: vw(18);
+        text-align: center;
+        line-height: 1.5;
+        @include pc {
+            margin-bottom: w500(16);
+            font-size: w500(18);
+        }
+        .u-font-large {
+            font-size: vw(24);
+            @include pc {
+                font-size: w500(24);
+            }
+        }
+        & + & {
+            margin: vw(12) 0 vw(32);
+            @include pc {
+                margin: w500(12) 0 w500(32);
             }
         }
     }
@@ -1201,12 +1222,12 @@
             transform:  scaleX(-1);
         }
     }
-    &__text {
-        margin: vw(16) 0 vw(4);
-        text-align: center;
-        font-weight: bold;
-        @include pc {
-            margin: w500(16) 0 w500(4);
+    &__bnr {
+        & + & {
+            margin-top: vw(16);
+            @include pc {
+                margin-top: w500(16);
+            }
         }
     }
 }

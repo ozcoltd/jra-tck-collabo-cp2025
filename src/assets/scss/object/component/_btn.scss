@@ -93,6 +93,21 @@
             margin-top: w500(16);
         }
     }
+    &.is-disabled {
+         a {
+             pointer-events: none;
+             img {
+                max-width: vw(200);
+                margin: 0 auto;
+                @include pc {
+                    max-width: w500(200);
+                }
+             }
+             span {
+                display: none;
+             }
+         }
+    }
     &--red {
         @extend .c-btn-shadow;
         a {
