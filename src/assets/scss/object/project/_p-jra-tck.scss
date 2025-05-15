@@ -112,7 +112,7 @@
     &__text {
         margin: 0 auto;
         padding: 0 20px;
-        width: min(calc(322 / 1366 * 100vw), (322px * 1.2));
+        max-width: min(calc(322 / 1366 * 100vw), (322px * 1.2));
     }
     
 }
