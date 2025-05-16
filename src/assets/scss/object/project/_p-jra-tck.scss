@@ -609,12 +609,12 @@
     }
     &__date-ja {
         span {
-            color: #FF646B;
+            color: #52D687;
         }
     }
     &__date-tokyo {
         span {
-            color: #52D687;
+            color: #FF646B;
         }
     }
     &__period {
@@ -1102,10 +1102,35 @@
     }
 }
 
-.p-jra-tck-contact {
-    padding: vw(56) vw(16) vw(60);
+.p-jra-tck-digi-co {
+    padding: vw(40) vw(16) 0;
     @include pc {
-        padding: w500(56) w500(16) w500(60);
+        padding: w500(40) w500(16) 0;
+    }
+    &__inner {
+        padding: vw(20) vw(12);
+        background: #F9F9F9;
+        @include pc {
+            padding: w500(20) w500(12);
+        }
+    }
+    &__ttl {
+        margin: 0 auto vw(12);
+        max-width: vw(140);
+        @include pc {
+            margin-bottom: w500(12);
+            max-width: w500(140);
+        }
+    }
+    &__text {
+        font-weight: bold;
+    }
+}
+
+.p-jra-tck-contact {
+    padding: vw(40) vw(16) vw(60);
+    @include pc {
+        padding: w500(40) w500(16) w500(60);
     }
     &__inner {
         padding: vw(24) vw(24) vw(32);
