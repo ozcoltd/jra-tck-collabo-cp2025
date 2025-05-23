@@ -625,6 +625,66 @@
     }
 }
 
+.p-jra-tck-follow {
+    padding: vw(56) vw(16);
+    background: $black;
+    color: #fff;
+    @include pc {
+        padding: w500(56) w500(16);
+    }
+    &__ttl {
+        margin-bottom: vw(20);
+        @include pc {
+            margin-bottom: w500(20);
+        }
+    }
+    &__heading {
+        margin-bottom: vw(40);
+        font-size: vw(18);
+        text-align: center;
+        @include pc {
+            margin-bottom: w500(40);
+            font-size: w500(18);
+        }
+    }
+    &__text {
+        .u-font-large {
+            font-size: vw(24);
+            @include pc {
+                font-size: w500(24);
+            }
+        }
+    }
+    &__date {
+        margin: 0 auto vw(36);
+        max-width: vw(323);
+        @include pc {
+            margin-bottom: w500(36);
+            max-width: w500(323);            
+        }
+    }
+    &__date-ttl {
+        margin-bottom: vw(2);
+        font-size: vw(16);
+        font-weight: bold;
+        @include pc {
+            margin-bottom: w500(2);
+            font-size: w500(16);
+        }
+    }
+    &__date-ja {
+        span {
+            color: #52D687;
+        }
+    }
+    &__date-tokyo {
+        span {
+            color: #FF646B;
+        }
+    }
+}
+
+
 .p-jra-tck-apply {
     padding: vw(56) vw(16);
     background: $gray;
