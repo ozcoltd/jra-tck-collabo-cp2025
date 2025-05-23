@@ -954,10 +954,10 @@
 }
 
 .p-jra-tck-info {
-    padding: vw(56) vw(16);
+    padding: vw(60) vw(16);
     background: url('./../images/bg/bg-info.png') center / cover no-repeat;
     @include pc {
-        padding: w500(56) w500(16);
+        padding: w500(60) w500(16);
     }
     &:has(.c-coming-soon-image) {
         padding-bottom: vw(40);
