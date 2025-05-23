@@ -1011,18 +1011,42 @@
         }
     }
     &__text-wrap {
-        padding: vw(16) vw(24);
+        padding: vw(20) vw(12);
+        background: #F5F5F5;
         @include pc {
             padding: w500(16) w500(24);
         }
     }
+    &__text-inner {
+        margin-top: vw(20);
+        & + & {
+            margin-top: vw(16);
+        }
+    }
     &__sub-ttl {
-        margin-bottom: vw(4);
+        margin-bottom: vw(12);
         font-size: vw(18);
         font-weight: bold;
         @include pc {
-            margin-bottom: w500(4);
+            margin-bottom: w500(12);
             font-size: w500(18);
+        }
+    }
+    &__sub {
+        margin-bottom: vw(4);
+        font-size: vw(16);
+        font-weight: bold;
+        @include pc {
+            margin-bottom: w500(4);
+            font-size: w500(16);
+        }
+    }
+    &__text {
+        & + & {
+            margin-top: vw(4);
+            @include pc {
+                margin-top: w500(4);
+            }
         }
     }
 }
