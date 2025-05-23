@@ -1014,13 +1014,19 @@
         padding: vw(20) vw(12);
         background: #F5F5F5;
         @include pc {
-            padding: w500(16) w500(24);
+            padding: w500(20) w500(12);
         }
     }
     &__text-inner {
         margin-top: vw(20);
+        @include pc {
+            margin-top: w500(20);
+        }
         & + & {
             margin-top: vw(16);
+            @include pc {
+                margin-top: w500(16);
+            }
         }
     }
     &__sub-ttl {
