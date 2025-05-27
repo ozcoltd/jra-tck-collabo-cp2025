@@ -7,14 +7,15 @@
     max-width: 332px;
     padding: 0 20px;
     &__list {
-        margin-bottom: min(calc(42 / 1366 * 100vw), 42px);
+        margin-bottom: clamp(20px, calc((100vh - 768px) * 0.125 + 20px), 40px);
         font-size: min(calc(16 / 1366 * 100vw), 16px);
         color: #fff;
         font-weight: bold;
     }
     &__item {
-        margin-top: min(calc(16 / 1366 * 100vw), 16px);
-
+        & + & {
+            margin-top: min(calc(16 / 1366 * 100vw), 16px);
+        }
     }
     &__link {
         &::before {
