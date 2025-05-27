@@ -23,6 +23,7 @@ if (metaKeywords == ''){ var metaKeywords = '' }
       <!-- // meta -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <% if (pageFlg === 'thanks') { %><meta name="robots" content="noindex"><% } %>
       <!-- // favicon.ico -->
       <link rel="icon" type="image/x-icon" href="<%= pagePath %>/assets/images/favicon.ico">
       <!-- // SEO関連 -->
