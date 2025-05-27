@@ -1,0 +1,31 @@
+<%
+const pagePath = './..',
+pageSlug = '',
+pageMeta = {
+  title:'JRA×TCK #感動をよくばれキャンペーン',
+  description:'JRAと東京シティ競馬（TCK）のコラボレーションキャンペーン。対象レースの馬券を500円以上購入すると抽選でデジコが当たる！両方購入でWチャンスも。',
+  descriptionTwitter:'JRAと東京シティ競馬の対象レース馬券購入で抽選でデジコが当たる！両方購入でWチャンス！',
+  keywords:'JRA,TCK,東京シティ競馬,競馬,キャンペーン,日本ダービー,東京ダービー,宝塚記念,帝王賞,有馬記念,ホープフルステークス,東京大賞典,デジコ'
+}
+%>
+<%- include(pagePath + '/inc/_header' , { pagePath: pagePath, pageSlug: pageSlug, pageMeta: pageMeta }) %>
+<main>
+  <%- include(pagePath + '/inc/_left' , { pagePath: pagePath }) %>
+
+  <%- include(pagePath + '/inc/_right' , { pagePath: pagePath , pageFlg: 'thanks' }) %>
+
+  <section class="p-jra-tck-thanks">
+    <h1 class="p-jra-tck-thanks__ttl"><img src="<%= pagePath %>/assets/images/img-thanks.png" alt="Thank you"></h1>
+    <p class="p-jra-tck-thanks__text">ご応募ありがとうございました。</p>
+    <p class="p-jra-tck-thanks__text">
+      当選の発表は<br>
+      キャンペーン期間終了後に抽選を行い、<br>
+      当選者にのみキャンペーン事務局より<br>
+      メールにてご案内をいたします。
+    </p>
+    <p class="c-btn"><a href="<%= pagePath %>/index.html#faq"><span>よくあるご質問</span></a></p>
+
+  </section>
+
+</main>
+<%- include(pagePath + '/inc/_footer' , { pagePath: pagePath, pageSlug: pageSlug }) %>

@@ -19,7 +19,7 @@ export function Animation() {
     } else {
         devSp = /iPhone|Android|Mobile|iPad/.test(ua);
     }
-    if(devSp) {
+    if(devSp || window.location.hash) {
         if(elm) elm.remove();
         return;
     } else {

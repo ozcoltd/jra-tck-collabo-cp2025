@@ -22,4 +22,15 @@ export function Anchor() {
     })
     
   });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+      if (window.innerWidth <= 768) {
+        headerHeight = document.querySelector('#js-header').offsetHeight;
+      }
+      smooth(hash);
+    }
+  })
 }

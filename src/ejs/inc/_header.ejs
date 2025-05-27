@@ -1,6 +1,7 @@
 
 <%
 var metaSiteTitle = '',
+pagePath = pagePath,
 metaTitle = pageMeta.title,
 metaDescription = pageMeta.description,
 metaTwitterDescription = pageMeta.descriptionTwitter,
@@ -23,7 +24,7 @@ if (metaKeywords == ''){ var metaKeywords = '' }
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <!-- // favicon.ico -->
-      <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+      <link rel="icon" type="image/x-icon" href="<%= pagePath %>/assets/images/favicon.ico">
       <!-- // SEO関連 -->
       <title><%= metaTitle %></title>
       <meta name="description" content="<%= metaDescription %>">
@@ -45,8 +46,8 @@ if (metaKeywords == ''){ var metaKeywords = '' }
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       <!-- // css -->
-      <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-      <link href="./assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="<%= pagePath %>/assets/css/swiper-bundle.min.css">
+      <link href="<%= pagePath %>/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -57,13 +58,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="l-header__logo">
             <a href="https://www.tokyocitykeiba.com" target="_blank">
                   <picture>
-                        <source media="(min-width: 769px)" type="image/png" srcset="./assets/images/icon/icon-haeder-logo-pc.svg">
-                        <img src="./assets/images/icon/icon-header-logo.png" alt="TCK 東京シティ競馬">
+                        <source media="(min-width: 769px)" type="image/png" srcset="<%= pagePath %>/assets/images/icon/icon-haeder-logo-pc.svg">
+                        <img src="<%= pagePath %>/assets/images/icon/icon-header-logo.png" alt="TCK 東京シティ競馬">
                   </picture>
             </a>
       </div>
       <ul class="l-header__list">
-            <li class="l-header__item"><a href="https://www.tokyocitykeiba.com/guide/web_tv_radio/" class="l-header__link" target="_blank"><img src="./assets/images/bnr/bnr-header-01.png" alt="テレビ・インターネット中継"></a></li>
-            <li class="l-header__item"><a href="https://www.spat4.jp/keiba/pc" class="l-header__link" target="_blank"><img src="./assets/images/bnr/bnr-header-02.png" alt="SPAT4で、毎日がドラマティック"></a></li>
+            <li class="l-header__item"><a href="https://www.tokyocitykeiba.com/guide/web_tv_radio/" class="l-header__link" target="_blank"><img src="<%= pagePath %>/assets/images/bnr/bnr-header-01.png" alt="テレビ・インターネット中継"></a></li>
+            <li class="l-header__item"><a href="https://www.spat4.jp/keiba/pc" class="l-header__link" target="_blank"><img src="<%= pagePath %>/assets/images/bnr/bnr-header-02.png" alt="SPAT4で、毎日がドラマティック"></a></li>
       </ul>
   </header>

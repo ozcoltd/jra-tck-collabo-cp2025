@@ -5,10 +5,12 @@
     margin: 0 auto;
     padding: vw(16) vw(20);
     width: 100%;
+    height: vw(223);
     background: $black;
     @include pc {
         padding: w500(16) w500(20);
         max-width: 500px;
+        height: w500(223);
     }
     &__logo {
         margin: 0 auto vw(32);

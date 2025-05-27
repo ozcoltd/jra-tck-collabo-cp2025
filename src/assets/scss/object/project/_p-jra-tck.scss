@@ -147,6 +147,48 @@
     }
 }
 
+.p-jra-tck-thanks {
+    padding-top: calc(vw(58) + vw(80));
+    padding-bottom: vw(100);
+    min-height: calc(100vh - vw(223));
+    min-height: calc(100dvh - vw(223));
+    min-height: calc(100svh - vw(223));
+    background: $gray;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include pc {
+        margin: 0 auto;
+        padding-top: w500(80);
+        padding-bottom: w500(100);
+        max-width: 500px;
+        width: 100%;
+        min-height: calc(100vh - w500(223));
+        min-height: calc(100dvh - w500(223));
+        min-height: calc(100svh - w500(223));
+    }
+    &__ttl {
+        max-width: vw(212);
+        margin: 0 auto vw(40);
+        @include pc {
+            max-width: w500(212);
+            margin-bottom: w500(40);
+        }
+    }
+    &__text {
+        color: #fff;
+        text-align: center;
+        & + & {
+            margin-top: 1rem;
+            margin-bottom: vw(40);
+            @include pc {
+                margin-bottom: w500(40);
+            }
+        }
+    }
+}
+
 .p-jra-tck-fv {
     padding-top: vw(45);
     background:
@@ -1285,24 +1327,26 @@
 }
 
 .p-jra-tck-bottom {
-    padding: vw(40) 0 vw(80);
+    padding: vw(40) 0 0;
     background:
     url('./../images/bg/bg-fv-content.png') repeat;
-    background-size: 100% vw(1040);
+    height: vw(1125);
+    background-size: 100% vw(1125);
     position: relative;
     @include pc {
-        padding: w500(40) 0 w500(80);
-        background-size: 100% w500(1040);
+        height: w500(1125);
+        padding: w500(40) 0 0;
+        background-size: 100% w500(1125);
     }   
 }
 
 .p-jra-tck-watch {
-    margin: vw(80) auto 0;
+    margin: vw(60) auto 0;
     padding: vw(20);
     max-width: vw(303);
     background: rgba(249, 249, 249, 0.8);
     @include pc {
-        margin: w500(80) auto 0;
+        margin: w500(60) auto 0;
         padding: w500(20);
         max-width: w500(303);
     }
@@ -1343,6 +1387,26 @@
             @include pc {
                 margin-top: w500(16);
             }
+        }
+    }
+}
+
+.p-jra-tck-notice {
+    margin: vw(60) auto 0;
+    padding: vw(20) vw(26);
+    max-width: vw(360);
+    background: $gray;
+    @include pc {
+        margin-top: w500(60);
+        padding: w500(20) w500(26);
+        max-width: w500(360);
+    }
+    &__text {
+        font-size: vw(12);
+        color: #fff;
+        text-align: center;
+        @include pc {
+            font-size: w500(12);
         }
     }
 }

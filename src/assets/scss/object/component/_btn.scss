@@ -3,6 +3,7 @@
 
 .c-btn {
     max-width: vw(240);
+    width: 100%;
     margin: 0 auto;
     @include pc {
         max-width: w500(240);
