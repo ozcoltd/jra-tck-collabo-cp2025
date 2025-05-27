@@ -1,6 +1,6 @@
 export function Animation() {
     const elm = document.querySelector('.js-animation');
-
+    if(!elm) return;
     // const fvFlg = sessionStorage.getItem('FirstView');
     // if(fvFlg){
     //     elm.remove();
@@ -29,6 +29,7 @@ export function Animation() {
     //ユーザスクロール操作、delayの数値分経過でファーストビューがフェードアウト
     window.addEventListener('load', () => {
         requestAnimationFrame(() => {
+            
             const sy = window.scrollY;
     
             const handleScroll = () => {
